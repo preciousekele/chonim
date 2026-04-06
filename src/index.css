@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior:smooth;
+}
+
+/* Vonique-64 Regular */
+@font-face {
+  font-family: 'Vonique64';
+  src: url('./assets/fonts/Vonique64.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Vonique-64 Bold */
+@font-face {
+  font-family: 'Vonique-64';
+  src: url('./assets/fonts/Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Vonique-64 Italic */
+@font-face {
+  font-family: 'Vonique-64';
+  src: url('./assets/fonts/Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Vonique-64 Bold Italic */
+@font-face {
+  font-family: 'Vonique-64';
+  src: url('./assets/fonts/BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #1f2937; /* text-gray-800 */
+  -webkit-box-shadow: 0 0 0px 1000px #f5f5f5 inset; /* your bg color */
+  box-shadow: 0 0 0px 1000px #f5f5f5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

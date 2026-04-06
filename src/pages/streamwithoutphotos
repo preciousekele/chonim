@@ -1,0 +1,187 @@
+export default function Streaming() {
+const streams = [
+  {
+    platform: "Instagram",
+    handle: "@choko_gabriel",
+    link: "https://instagram.com/live",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="url(#igGradient)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <defs>
+          <linearGradient id="igGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#f09433" />
+            <stop offset="25%" stopColor="#e6683c" />
+            <stop offset="50%" stopColor="#dc2743" />
+            <stop offset="75%" stopColor="#cc2366" />
+            <stop offset="100%" stopColor="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.5" fill="#dc2743" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    platform: "YouTube",
+    handle: "@chokogabriel",
+    link: "https://youtube.com/live",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#FF0000"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+        <polygon
+          points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
+          fill="#FF0000"
+          stroke="none"
+        />
+      </svg>
+    ),
+  },
+];
+
+  return (
+    <div className="flex flex-col items-center justify-center bg-white px-6 py-16">
+      {/* Header */}
+      <h1
+        className="uppercase text-black text-center mb-4"
+        style={{
+          fontFamily: "'Vonique64', serif",
+          fontWeight: 100,
+          lineHeight: 0.8,
+          letterSpacing: "0.02em",
+          fontSize: "clamp(.5rem, 3vw, 6rem)",
+        }}
+      >
+        Live Streaming
+      </h1>
+
+      {/* Subtext */}
+      <p
+        className="text-gray-400 text-center mb-20"
+        style={{
+          fontFamily: "Playfair Display, serif",
+          fontWeight: 300,
+          fontSize: "clamp(12px, 2vw, 14px)",
+          letterSpacing: "0.25em",
+        }}
+      >
+        Join us live wherever you are
+      </p>
+
+      {/* Date + Times */}
+      <div className="flex flex-col items-center gap-2 mb-20">
+        <p
+          className="uppercase text-black text-center"
+          style={{
+            fontFamily: "'Vonique64', serif",
+            fontWeight: 600,
+            fontSize: "clamp(1rem, 2.5vw, 2.2rem)",
+            letterSpacing: "0.15em",
+          }}
+        >
+          Saturday, 25th JULY 2025
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center gap-6 mt-4">
+          {[
+            { label: "West Africa Time", time: "00:00 WAT" },
+            { label: "United Kingdom", time: "00:00 BST" },
+          ].map((t) => (
+            <div key={t.label} className="flex flex-col items-center gap-1">
+              <span
+                className="uppercase text-gray-400 tracking-widest"
+                style={{
+                  fontSize: "10px",
+                  fontWeight: 300,
+                  letterSpacing: "0.3em",
+                }}
+              >
+                {t.label}
+              </span>
+              <span
+                className="text-gray-800 tracking-widest"
+                style={{
+                  fontSize: "clamp(13px, 1.5vw, 15px)",
+                  fontWeight: 500,
+                }}
+              >
+                {t.time}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Stream Buttons */}
+      <div className="flex flex-col sm:flex-row items-center gap-6 mb-18">
+        {streams.map((s) => (
+          <a
+            key={s.platform}
+            href={s.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-10 py-4 border border-gray-200 hover:border-gray-400 transition-colors duration-300 group"
+          >
+            <span className="text-gray-400 group-hover:text-gray-700 transition-colors duration-300">
+              {s.icon}
+            </span>
+            <div>
+              <p
+                className="uppercase text-gray-900 tracking-widest"
+                style={{ fontSize: "13px", fontWeight: 500 }}
+              >
+                {s.platform}
+              </p>
+              <p
+                className="text-gray-500 tracking-widest"
+                style={{ fontSize: "12px", fontWeight: 400 }}
+              >
+                {s.handle}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Hashtag */}
+      <div className="flex flex-col items-center gap-2 border-t border-gray-100 pt-10 w-full max-w-xs text-center">
+        <p
+          className="uppercase text-gray-400 tracking-widest"
+          style={{ fontSize: "10px", fontWeight: 300, letterSpacing: "0.35em" }}
+        >
+          Wedding Hashtag
+        </p>
+        <p
+          className="text-black"
+          style={{
+            fontFamily: "'Vonique64', serif",
+            fontWeight: 100,
+            fontSize: "clamp(1.2rem, 3vw, 2.5rem)",
+            letterSpacing: "0.1em",
+          }}
+        >
+          #ChokoWedsNimechi
+        </p>
+      </div>
+    </div>
+  );
+}
