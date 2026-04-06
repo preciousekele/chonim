@@ -165,7 +165,7 @@ function FallingPhoto({ slot, src, size }) {
           width: size,
           aspectRatio: "3/4",
           background: "#ffffff",
-          borderRadius: "2px",
+          borderRadius: "24px",
           overflow: "hidden",
           boxShadow: "0 6px 24px rgba(0,0,0,0.12)",
         }}
