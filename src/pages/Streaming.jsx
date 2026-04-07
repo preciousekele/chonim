@@ -190,7 +190,7 @@ const streams = [
   {
     platform: "Instagram",
     handle: "@choko_gabriel",
-    link: "https://instagram.com/live",
+    link: "https://www.instagram.com/choko_gabriel?igsh=MXZzbjhqcWw5cjgxNQ==",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +221,7 @@ const streams = [
   {
     platform: "YouTube",
     handle: "@chokogabriel",
-    link: "https://youtube.com/live",
+    link: "https://youtube.com/@chokogabriel?si=M3dbE0fFDJDh47U3",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
