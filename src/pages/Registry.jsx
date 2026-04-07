@@ -124,7 +124,7 @@ function AccountCard({ account }) {
 
 export default function Registry() {
   return (
-    <div className="flex flex-col items-center justify-center bg-amber-100 px-6 py-8 md:py-12">
+    <div className="flex flex-col items-center justify-center bg-amber-100 px-6 py-8 md:py-32">
       {/* Heading */}
       <h1
         className="uppercase text-black text-center mb-4"

@@ -31,6 +31,21 @@ const images = [
     src: "/chonim3.jpeg",
     alt: "Portrait outdoors",
   },
+  {
+    id: 6,
+    src: "/chonim13.jpeg",
+    alt: "Portrait outdoors",
+  },
+  {
+    id: 6,
+    src: "/chonim7.jpeg",
+    alt: "Portrait outdoors",
+  },
+  {
+    id: 6,
+    src: "/chonim14.jpeg",
+    alt: "Portrait outdoors",
+  },
 ];
 
 export default function Moments() {
