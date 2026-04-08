@@ -12,10 +12,10 @@ const Header = () => {
           fontFamily: "'Vonique64', serif",
           letterSpacing: "0.3em",
           fontWeight: 200,
-          fontSize: "clamp(14px, 1.8vw, 27px)",
+          fontSize: "clamp(18px, 1.8vw, 27px)",
         }}
       >
-        Choko &amp; Nimechi
+        Choko weds Nimechi
       </motion.p>
     </header>
   );
