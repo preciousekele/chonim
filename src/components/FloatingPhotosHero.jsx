@@ -10,7 +10,6 @@ export default function VideoHero() {
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
     setIsMobile(mq.matches);
-
     const handler = (e) => setIsMobile(e.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
@@ -34,7 +33,6 @@ export default function VideoHero() {
           transform: "translate(-50%, -50%)",
           objectFit: "cover",
           zIndex: 1,
-          // Mobile: true fullscreen, no card
           width: isMobile ? "100%" : CARD_WIDTH,
           height: isMobile ? "100%" : CARD_HEIGHT,
           borderRadius: isMobile ? "0" : "1rem",
@@ -44,13 +42,11 @@ export default function VideoHero() {
         <source src={videoSrc} type="video/mp4" />
       </video>
 
-      {/* OVERLAY — desktop only */}
-      {!isMobile && (
-        <div
-          className="absolute inset-0"
-          style={{ background: "rgba(0,0,0,0.25)", zIndex: 2 }}
-        />
-      )}
+      {/* OVERLAY */}
+      <div
+        className="absolute inset-0"
+        style={{ background: "rgba(0,0,0,0.25)", zIndex: 2 }}
+      />
 
       {/* TEXT */}
       <motion.div
@@ -61,17 +57,30 @@ export default function VideoHero() {
         style={{ zIndex: 3 }}
       >
         <h1
-          className="uppercase text-white whitespace-nowrap"
+          className="text-white text-center"
           style={{
-            fontSize: "clamp(24px, 8vw, 98px)",
-            fontFamily: "'Vonique64', serif",
-            fontWeight: 200,
-            lineHeight: 1,
-            letterSpacing: "0.02em",
+            fontFamily: 'SymphonieCalligraphy, cursive',
+            fontWeight: 400,
             textShadow: "0 4px 32px rgba(0,0,0,0.6)",
+            letterSpacing: "0.05em",
+            ...(isMobile
+              ? {
+                  // Mobile: stacked, large
+                  fontSize: "clamp(30px, 12vw, 12px)",
+                  lineHeight: 1.8,
+                }
+              : {
+                  // Desktop: all on fewer lines, much smaller
+                  fontSize: "clamp(36px, 5vw, 72px)",
+                  lineHeight: 1.4,
+                }),
           }}
         >
-          We Are Getting Married
+          {isMobile ? (
+            <>We<br />are<br />getting<br />Married</>
+          ) : (
+            <>We<br /> are<br />getting <br /> Married</>
+          )}
         </h1>
       </motion.div>
     </div>

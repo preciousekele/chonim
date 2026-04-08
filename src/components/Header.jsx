@@ -7,15 +7,15 @@ const Header = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.6, duration: 0.8 }}
-        className="uppercase text-black"
+        className="text-black"
         style={{
-          fontFamily: "'Vonique64', serif",
-          letterSpacing: "0.3em",
-          fontWeight: 200,
-          fontSize: "clamp(18px, 1.8vw, 27px)",
+          fontFamily: 'SymphonieCalligraphy, cursive',
+          letterSpacing: "0.08em",
+          fontWeight: 400,
+          fontSize: "clamp(26px, 1.8vw, 27px)",
         }}
       >
-        Choko weds Nimechi
+        Choko &amp; Nimechi
       </motion.p>
     </header>
   );

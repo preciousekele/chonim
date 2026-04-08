@@ -54,3 +54,10 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px #f5f5f5 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+@font-face {
+  font-family: 'SymphonieCalligraphy';
+  src: url('/SymphonieCalligraphyDEMO-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
