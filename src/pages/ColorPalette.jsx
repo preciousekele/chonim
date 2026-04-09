@@ -14,11 +14,6 @@ export default function ColorPalette() {
     { name: "Ivory", hex: "#F8F4E3" },
     { name: "Nude", hex: "#E8C9A0" },
     { name: "Caramel Nude", hex: "#C4A882" },
-
-    // Black & Neutral
-    { name: "Charcoal", hex: "#4A4A4A" },
-    { name: "Slate", hex: "#2D2D2D" },
-    { name: "Black", hex: "#1A1A1A" },
   ];
 
   const groups = [
@@ -52,7 +47,7 @@ export default function ColorPalette() {
           letterSpacing: "0.3em",
         }}
       >
-        Elegantly flamboyant
+        Dress elegantly flamboyant in rich African fabric in any of the following colours
       </p>
 
       {/* Groups */}

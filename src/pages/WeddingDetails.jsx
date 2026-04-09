@@ -38,11 +38,11 @@ export default function WeddingDetails({ onNavigate }) {
         fontFamily: "'Kugile', serif",
         lineHeight: 1,
         fontWeight: 200,
-        fontSize: "clamp(1rem, 6vw, 1rem)",
+        fontSize: "clamp(.5rem, 3vw, 1rem)",
         textAlign: "center",
         color: "#EDE4D5",
       }}>
-        Click any to View
+        kindly click all for further important details
       </p>
 
       <div style={{

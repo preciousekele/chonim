@@ -1,190 +1,4 @@
-import { motion } from "framer-motion";
-
-import photo1 from "/chonim11.jpeg";
-import photo2 from "/chonim2.jpg";
-import photo3 from "/chonim8.jpeg";
-import photo4 from "/chonim4.jpeg";
-
-const myPhotos = [photo1, photo2, photo3, photo4];
-
-const slots = [
-  {
-    id: 1,
-    layer: "back",
-    startLeft: "3%",
-    delay: 0,
-    duration: 5,
-    horizontalMove: 450,
-    rotation: 360,
-  },
-  {
-    id: 2,
-    layer: "front",
-    startLeft: "18%",
-    delay: 1.5,
-    duration: 7,
-    horizontalMove: -450,
-    rotation: -360,
-  },
-  {
-    id: 3,
-    layer: "back",
-    startLeft: "35%",
-    delay: 0.5,
-    duration: 6,
-    horizontalMove: 100,
-    rotation: 360,
-  },
-  {
-    id: 4,
-    layer: "front",
-    startLeft: "50%",
-    delay: 2,
-    duration: 9,
-    horizontalMove: -450,
-    rotation: -360,
-  },
-  {
-    id: 5,
-    layer: "back",
-    startLeft: "65%",
-    delay: 1,
-    duration: 4,
-    horizontalMove: 450,
-    rotation: 360,
-  },
-  {
-    id: 6,
-    layer: "front",
-    startLeft: "78%",
-    delay: 2,
-    duration: 6,
-    horizontalMove: -120,
-    rotation: -360,
-  },
-  {
-    id: 7,
-    layer: "back",
-    startLeft: "88%",
-    delay: 0.8,
-    duration: 4,
-    horizontalMove: 160,
-    rotation: 360,
-  },
-  {
-    id: 8,
-    layer: "front",
-    startLeft: "10%",
-    delay: 2,
-    duration: 8,
-    horizontalMove: -140,
-    rotation: -360,
-  },
-  {
-    id: 9,
-    layer: "back",
-    startLeft: "55%",
-    delay: 1.5,
-    duration: 6,
-    horizontalMove: 110,
-    rotation: 360,
-  },
-  {
-    id: 10,
-    layer: "front",
-    startLeft: "42%",
-    delay: 2.5,
-    duration: 7,
-    horizontalMove: -160,
-    rotation: -360,
-  },
-  {
-    id: 11,
-    layer: "back",
-    startLeft: "20%",
-    delay: 0,
-    duration: 5,
-    horizontalMove: 160,
-    rotation: 360,
-  },
-];
-
-const photoSizes = {
-  0: "clamp(60px, 8vw, 100px)",
-  1: "clamp(60px, 8vw, 100px)",
-  2: "clamp(110px, 14vw, 160px)",
-  3: "clamp(80px, 10vw, 120px)",
-};
-
-function FallingPhoto({ slot, src, size }) {
-  const zIndex = slot.layer === "front" ? 30 : 10;
-
-  return (
-    <motion.div
-      initial={{ y: "-15vh", x: 0, opacity: 1, rotate: 0 }}
-      animate={{
-        y: "115vh",
-        x: slot.horizontalMove,
-        opacity: 1,
-        rotate: [0, slot.rotation * 0.5, slot.rotation],
-      }}
-      transition={{
-        duration: slot.duration,
-        delay: slot.delay,
-        repeat: Infinity,
-        ease: "linear",
-        repeatType: "loop",
-        x: {
-          duration: slot.duration,
-          repeat: Infinity,
-          repeatType: "loop",
-          delay: slot.delay,
-          ease: "easeInOut",
-        },
-        rotate: {
-          times: [0, 0.5, 1],
-          duration: slot.duration,
-          repeat: Infinity,
-          repeatType: "loop",
-          delay: slot.delay,
-          ease: "linear",
-        },
-      }}
-      style={{
-        position: "absolute",
-        top: 0,
-        left: slot.startLeft,
-        zIndex,
-        pointerEvents: "none",
-        willChange: "transform",
-        mixBlendMode: "multiply",
-      }}
-    >
-      <div
-        style={{
-          width: size,
-          aspectRatio: "3/4",
-          background: "#ffffff",
-          borderRadius: "24px",
-          overflow: "hidden",
-          boxShadow: "0 6px 24px rgba(0,0,0,0.12)",
-        }}
-      >
-        <img
-          src={src}
-          alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            display: "block",
-            mixBlendMode: "multiply",
-          }}
-        />
-      </div>
-    </motion.div>
-  );
-}
+import { ArrowBigDown, MousePointerClick } from "lucide-react";
 
 const streams = [
   {
@@ -247,28 +61,12 @@ const streams = [
 
 export default function Streaming() {
   return (
-    <div className="relative h-full w-full bg-white overflow-hidden flex flex-col items-center justify-center px-6 py-8 md:py-16"
-    style={{ paddingTop: "", paddingBottom: "60px", height: "100vh" }}>
-      {/* LAYER 1 — photos behind content */}
-      {slots
-        .filter((s) => s.layer === "back")
-        .map((slot) => {
-          const photoIndex = (slot.id - 1) % myPhotos.length;
-          return (
-            <FallingPhoto
-              key={slot.id}
-              slot={slot}
-              src={myPhotos[photoIndex]}
-              size={photoSizes[photoIndex]}
-            />
-          );
-        })}
-
-      {/* LAYER 2 — original content, untouched, z-index 20 */}
+    <div
+      className="relative h-full w-full bg-white overflow-hidden flex flex-col items-center justify-center px-6 py-8 md:py-16"
+      style={{ paddingBottom: "60px", height: "100vh" }}
+    >
       <div
         style={{
-          zIndex: 20,
-          position: "relative",
           width: "100%",
           display: "flex",
           flexDirection: "column",
@@ -279,11 +77,12 @@ export default function Streaming() {
         <h1
           className="uppercase text-black text-center mb-4"
           style={{
-            fontFamily: "'Vonique64', serif",
-            fontWeight: 100,
+            fontFamily: "'Kugile', serif",
+            fontWeight: 400,
             lineHeight: 0.8,
-            letterSpacing: "0.02em",
-            fontSize: "clamp(1.8rem, 5vw, 9rem)",
+            letterSpacing: "0.12em",
+            fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
+            color: "#6B1525",
           }}
         >
           Live Streaming
@@ -299,7 +98,8 @@ export default function Streaming() {
             letterSpacing: "0.25em",
           }}
         >
-          To all our family unable to join us in person, celebrate with us on our YouTube & Instagram
+          To all our Family and Friends around the world who are unable to
+          attend in person, celebrate with us on our YouTube or Instagram
         </p>
 
         {/* Date + Times */}
@@ -307,10 +107,10 @@ export default function Streaming() {
           <p
             className="uppercase text-black text-center"
             style={{
-              fontFamily: "'Vonique64', serif",
-              fontWeight: 600,
-              fontSize: "clamp(1.3rem, 3.5vw, 2.4rem)",
-              letterSpacing: "0.15em",
+              fontFamily: "Playfair Display, serif",
+              fontWeight: 500,
+              fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)",
+              letterSpacing: "0.1em",
             }}
           >
             Saturday, 25th JULY 2026
@@ -325,7 +125,7 @@ export default function Streaming() {
                 <span
                   className="uppercase text-gray-400 tracking-widest"
                   style={{
-                    fontSize: "clamp(9px, 1.8vw, 10px)",
+                    fontSize: "clamp(11px, 1.8vw, 10px)",
                     fontWeight: 300,
                     letterSpacing: "0.3em",
                     fontFamily: "'Montserrat', sans-serif",
@@ -336,7 +136,7 @@ export default function Streaming() {
                 <span
                   className="text-gray-800 tracking-widest"
                   style={{
-                    fontSize: "clamp(13px, 1.5vw, 15px)",
+                    fontSize: "clamp(15px, 1.5vw, 15px)",
                     fontWeight: 500,
                   }}
                 >
@@ -347,12 +147,36 @@ export default function Streaming() {
           </div>
         </div>
 
+        {/* Click to join CTA */}
+        <div className="flex items-center gap-2 mb-3">
+          <ArrowBigDown
+            size={14}
+            strokeWidth={1.5}
+            className="text-[#6B1525]"
+          />
+          <p
+            className="uppercase tracking-widest"
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 300,
+              fontSize: "11px",
+              letterSpacing: "0.35em",
+              color: "#6B1525",
+            }}
+          >
+            Click to join us live
+          </p>
+          <ArrowBigDown
+            size={14}
+            strokeWidth={1.5}
+            className="text-[#6B1525]"
+          />
+        </div>
+
         {/* Stream Buttons */}
         <div
           className="flex items-center gap-4 mb-18"
           style={{
-            position: "relative",
-            zIndex: 70,
             flexDirection: "row",
             flexWrap: "wrap",
             justifyContent: "center",
@@ -376,7 +200,7 @@ export default function Streaming() {
                 <p
                   className="uppercase text-gray-900 tracking-widest"
                   style={{
-                    fontSize: "clamp(10px, 2.5vw, 13px)",
+                    fontSize: "clamp(12px, 2.5vw, 13px)",
                     fontWeight: 500,
                   }}
                 >
@@ -384,7 +208,10 @@ export default function Streaming() {
                 </p>
                 <p
                   className="text-gray-500 tracking-widest"
-                  style={{ fontSize: "clamp(9px, 2vw, 12px)", fontWeight: 400 }}
+                  style={{
+                    fontSize: "clamp(11px, 2vw, 12px)",
+                    fontWeight: 400,
+                  }}
                 >
                   {s.handle}
                 </p>
@@ -398,7 +225,7 @@ export default function Streaming() {
           <p
             className="uppercase text-gray-400 tracking-widest"
             style={{
-              fontSize: "10px",
+              fontSize: "13px",
               fontWeight: 300,
               letterSpacing: "0.35em",
             }}
@@ -406,34 +233,20 @@ export default function Streaming() {
             Wedding Hashtag
           </p>
           <p
-            className="text-black"
+            className="text"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 100,
-              fontSize: "clamp(1.2rem, 3vw, 2.5rem)",
+              fontSize: "clamp(1.3rem, 3vw, 2.5rem)",
               letterSpacing: "0.1em",
               fontStyle: "italic",
+              color: "#7A520F",
             }}
           >
             #Alovewhichknowsnoending
           </p>
         </div>
       </div>
-
-      {/* LAYER 3 — photos in front of content */}
-      {slots
-        .filter((s) => s.layer === "front")
-        .map((slot) => {
-          const photoIndex = (slot.id - 1) % myPhotos.length;
-          return (
-            <FallingPhoto
-              key={slot.id}
-              slot={slot}
-              src={myPhotos[photoIndex]}
-              size={photoSizes[photoIndex]}
-            />
-          );
-        })}
     </div>
   );
 }
