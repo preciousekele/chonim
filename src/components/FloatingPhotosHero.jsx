@@ -59,14 +59,15 @@ export default function VideoHero() {
         <h1
           className="text-white text-center"
           style={{
-            fontFamily: 'SymphonieCalligraphy, cursive',
-            fontWeight: 400,
+            // fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Kugile', serif",
+            fontWeight: 100,
             textShadow: "0 4px 32px rgba(0,0,0,0.6)",
             letterSpacing: "0.05em",
             ...(isMobile
               ? {
                   // Mobile: stacked, large
-                  fontSize: "clamp(30px, 12vw, 12px)",
+                  fontSize: "clamp(27px, 12vw, 12px)",
                   lineHeight: 1.8,
                 }
               : {
@@ -77,9 +78,9 @@ export default function VideoHero() {
           }}
         >
           {isMobile ? (
-            <>We<br />are<br />getting<br />Married</>
+            <>We are getting Married!!!</>
           ) : (
-            <>We<br /> are<br />getting <br /> Married</>
+            <>We are getting Married!!!</>
           )}
         </h1>
       </motion.div>

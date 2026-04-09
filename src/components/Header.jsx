@@ -9,9 +9,11 @@ const Header = () => {
         transition={{ delay: 1.6, duration: 0.8 }}
         className="text-black"
         style={{
-          fontFamily: 'SymphonieCalligraphy, cursive',
+          // fontFamily: 'SymphonieCalligraphy, cursive',
+          // fontFamily: "'Playfair Display', serif",
+          fontFamily: "'Kugile', serif",
           letterSpacing: "0.08em",
-          fontWeight: 400,
+          fontWeight: 100,
           fontSize: "clamp(26px, 1.8vw, 27px)",
         }}
       >

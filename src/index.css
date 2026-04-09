@@ -61,3 +61,10 @@ select:-webkit-autofill:focus {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Kugile';
+  src: url('/Kugile_Demo.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

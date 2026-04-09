@@ -3,17 +3,17 @@ import { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
-    year: "How we met",
+    year: "God is the perfect matchmaker",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/chonim10.jpeg",
   },
   {
-    year: "Proposal",
+    year: "God is the perfect matchmaker",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/chonim2.jpg",
   },
   {
-    year: "Forever",
+    year: "God is the perfect matchmaker",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/chonim1.jpg",
   },
@@ -175,7 +175,7 @@ export default function OurJourney() {
     <>
       {/* ── MOBILE & TABLET (hidden on md+) ── */}
       <section
-        className="relative w-full bg-[#111] overflow-hidden select-none md:hidden"
+        className="relative w-full bg-[#725a17] overflow-hidden select-none md:hidden"
         style={{ height: mobileSlideH }}
       >
         {/* OUR JOURNEY header — pinned above the strip, always visible */}
@@ -183,14 +183,15 @@ export default function OurJourney() {
           <h2
             className="text-white tracking-widest font-light"
             style={{
-              letterSpacing: "0.15em",
-              fontFamily: "'Vonique64', serif",
+              letterSpacing: "0.1em",
+              // fontFamily: "'Vonique64', serif",
+              fontFamily: "'Kugile', serif",
               lineHeight: 1,
               fontWeight: 200,
               fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
             }}
           >
-            OUR STORY
+            OUR STORY 
           </h2>
         </div>
 
@@ -251,12 +252,15 @@ export default function OurJourney() {
                 {/* Year */}
                 <div
                   style={{
-                    fontSize: "clamp(4.5rem, 18vw, 7rem)",
-                    color: "#b08fa0",
+                    fontSize: "clamp(1rem, 18vw, 1rem)",
+                    color: "#F8F4E3",
                     letterSpacing: "-0.02em",
-                    fontFamily: "'Vonique64', serif",
+                    // fontFamily: "'Vonique64', serif",
+                    fontFamily: "'Kugile', serif",
                     lineHeight: 0.88,
                     fontWeight: 80,
+                    foontStyle: "italic",
+                    textAlign: "right",
                   }}
                 >
                   {s.year}
@@ -267,7 +271,7 @@ export default function OurJourney() {
                 {/* Text */}
                 <p
                   style={{
-                    color: "white",
+                    color: "#F8F4E3",
                     fontFamily: "neue-sans, sans-serif",
                     fontSize: "clamp(0.95rem, 4vw, 1.2rem)",
                     fontWeight: 100,
@@ -290,7 +294,7 @@ export default function OurJourney() {
                   marginRight: "1.5rem",
                   marginBottom: "2rem",
                   flexGrow: 1,
-                  borderRadius: "2px",
+                  borderRadius: "24px",
                 }}
                 onTouchStart={() => setTouchedImage(i)}
                 onTouchEnd={() => setTouchedImage(null)}
@@ -307,6 +311,7 @@ export default function OurJourney() {
                     transition: "filter 0.5s ease",
                     userSelect: "none",
                     WebkitUserDrag: "none",
+                    borderRadius: "24px",
                   }}
                   draggable={false}
                 />
