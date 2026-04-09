@@ -20,6 +20,27 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
   </head>
+  <audio
+    id="bg-music"
+    src="/music/background.mp3"
+    loop
+    volume="0.8"
+    style="display: none"
+  ></audio>
+  <script>
+    const audio = document.getElementById("bg-music");
+    audio.volume = 0.8;
+    const play = () => {
+      audio.muted = false;
+      audio.play().catch(() => {});
+      ["click", "touchstart", "keydown", "scroll"].forEach((e) =>
+        window.removeEventListener(e, play),
+      );
+    };
+    ["click", "touchstart", "keydown", "scroll"].forEach((e) =>
+      window.addEventListener(e, play),
+    );
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
