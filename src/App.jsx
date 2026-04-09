@@ -9,6 +9,7 @@ import Registry from './pages/Registry'
 import ColorPalette from './pages/ColorPalette'
 import Streaming from './pages/Streaming'
 import BackgroundMusic from './components/BackgroundMusic'
+import { Travel } from './pages/Travel'
 
 export default function App() {
   return (
@@ -18,11 +19,12 @@ export default function App() {
       <Navbar />
       <section id="home"><Home /></section>
       <section id="our-journey"><OurJourney /></section>
-      <section id="rsvp"><Rsvp /></section>
       <section id="registry"><Registry /></section>
+      <section id="rsvp"><Rsvp /></section>
       <section id="dresscode"><ColorPalette /></section>
       <section id="connect"><Connect /></section>
       <section id="streaming"><Streaming /></section>
+      <section id="travel"><Travel /></section>
       <section id="moments"><Moments /></section>
     </>
   )

@@ -175,13 +175,13 @@ export default function OurJourney() {
     <>
       {/* ── MOBILE & TABLET (hidden on md+) ── */}
       <section
-        className="relative w-full bg-[#725a17] overflow-hidden select-none md:hidden"
+        className="relative w-full bg-[#F7E7CE] overflow-hidden select-none md:hidden"
         style={{ height: mobileSlideH }}
       >
         {/* OUR JOURNEY header — pinned above the strip, always visible */}
         <div className="absolute top-8 left-6 z-30 pointer-events-none">
           <h2
-            className="text-white tracking-widest font-light"
+            className="text-gray-700 tracking-widest font-light"
             style={{
               letterSpacing: "0.1em",
               // fontFamily: "'Vonique64', serif",
@@ -253,7 +253,7 @@ export default function OurJourney() {
                 <div
                   style={{
                     fontSize: "clamp(1rem, 18vw, 1rem)",
-                    color: "#F8F4E3",
+                    color: "#b08fa0",
                     letterSpacing: "-0.02em",
                     // fontFamily: "'Vonique64', serif",
                     fontFamily: "'Kugile', serif",
@@ -271,7 +271,7 @@ export default function OurJourney() {
                 {/* Text */}
                 <p
                   style={{
-                    color: "#F8F4E3",
+                    color: "#9ca3af",
                     fontFamily: "neue-sans, sans-serif",
                     fontSize: "clamp(0.95rem, 4vw, 1.2rem)",
                     fontWeight: 100,

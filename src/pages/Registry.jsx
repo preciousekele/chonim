@@ -31,7 +31,7 @@ function AccountCard({ account }) {
       {/* Country & Currency */}
       <div>
         <p
-          className="text-sm uppercase tracking-widest text-gray-400 mb-1"
+          className="text-sm uppercase tracking-widest text-gray-700 mb-1"
           style={{ fontWeight: 300 }}
         >
           {account.country} {account.currency}
@@ -43,14 +43,14 @@ function AccountCard({ account }) {
       {/* Name */}
       <div>
         <p
-          className="text-xs uppercase tracking-widest text-gray-400 mb-1"
+          className="text-xs uppercase tracking-widest text-gray-700 mb-1"
           style={{ fontWeight: 300 }}
         >
           Name
         </p>
         <p
-          className="text-gray-800 text-md tracking-wide"
-          style={{ fontWeight: 500 }}
+          className="text-gray-900 text-md tracking-wide"
+          style={{ fontWeight: 400 }}
         >
           {account.name}
         </p>
@@ -59,15 +59,15 @@ function AccountCard({ account }) {
       {/* Account Number */}
       <div>
         <p
-          className="text-xs uppercase tracking-widest text-gray-400 mb-1"
+          className="text-xs uppercase tracking-widest text-gray-700 mb-1"
           style={{ fontWeight: 300 }}
         >
           Account No.
         </p>
         <div className="flex items-center gap-3">
           <p
-            className="text-gray-800 text-md tracking-widest"
-            style={{ fontWeight: 500 }}
+            className="text-gray-900 text-md tracking-widest"
+            style={{ fontWeight: 400 }}
           >
             {account.number}
           </p>
@@ -106,14 +106,14 @@ function AccountCard({ account }) {
       {/* Bank */}
       <div>
         <p
-          className="text-xs uppercase tracking-widest text-gray-400 mb-1"
+          className="text-xs uppercase tracking-widest text-gray-700 mb-1"
           style={{ fontWeight: 300 }}
         >
           Bank
         </p>
         <p
-          className="text-gray-800 text-md tracking-wide"
-          style={{ fontWeight: 500 }}
+          className="text-gray-900 text-md tracking-wide"
+          style={{ fontWeight: 400 }}
         >
           {account.bank}
         </p>
@@ -124,28 +124,33 @@ function AccountCard({ account }) {
 
 export default function Registry() {
   return (
-    <div className="flex flex-col items-center justify-center bg-amber-100 px-6 py-8 md:py-32">
+    <div
+  className="flex flex-col items-center justify-center px-6 py-8 md:py-32"
+  style={{
+    background: "linear-gradient(to top right, #FFFFF0, #E8DCC8)",
+  }}
+>
       {/* Heading */}
       <h1
-        className="uppercase text-black text-center mb-4"
+        className="uppercase text-gray-900 text-center mb-4"
         style={{
-          fontFamily: "'Vonique64', serif",
+          fontFamily: "'Kugile', serif",
           fontWeight: 100,
           lineHeight: 0.8,
           letterSpacing: "0.02em",
           fontSize: "clamp(.5rem, 5vw, 9rem)",
         }}
       >
-        Registry
+        GIFTINGS
       </h1>
 
       {/* Subtext */}
       <p
-        className="text-gray-400 uppercase tracking-widest text-center mb-16"
+        className="text-gray-600 uppercase tracking-widest text-center mb-16"
         style={{
           fontWeight: 300,
           fontSize: "clamp(11px, 1vw, 13px)",
-          letterSpacing: "0.3em",
+          letterSpacing: "0.2em",
         }}
       >
         No gifts — just finance
