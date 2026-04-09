@@ -68,7 +68,7 @@ export default function Rsvp() {
     return (
       <div
         className="flex flex-col items-center justify-center px-6"
-        style={{ minHeight: "30vh", background: "#f5f5f5", paddingTop: "80px", paddingBottom: "50px" }}
+        style={{ background: "#EDE4D5", paddingTop: "60px", paddingBottom: "60px", height: "100vh" }}
       >
         <p
           style={{
@@ -90,7 +90,7 @@ export default function Rsvp() {
             fontWeight: 300,
             fontSize: "clamp(22px, 8vw, 56px)",
             letterSpacing: "0.08em",
-            color: "#3c212f",
+            color: "#6B1525",
             marginBottom: "12px",
             textAlign: "center",
           }}
@@ -112,7 +112,7 @@ export default function Rsvp() {
         >
           {alreadyRegistered
             ? `Welcome back, ${firstName}. You're already registered.`
-            : `Welcome, ${firstName}. This is your unique event identity, keep it handy.`}
+            : `Welcome, ${firstName}. This is your unique event identity for access into the event, keep it handy.`}
         </p>
 
         <button
@@ -120,8 +120,8 @@ export default function Rsvp() {
           style={{
             fontFamily: "'Jost', sans-serif",
             background: "transparent",
-            border: "1px solid #c58fab",
-            color: "#c58fab",
+            border: "1px solid #7B1A2A",
+            color: "#7B1A2A",
             padding: "10px 28px",
             borderRadius: "12px",
             fontSize: "11px",
@@ -140,7 +140,7 @@ export default function Rsvp() {
   return (
     <div
       className="flex flex-col items-center justify-center px-6"
-      style={{ background: "#f5f5f5", paddingTop: "60px", paddingBottom: "60px" }}
+      style={{ background: "#EDE4D5", paddingTop: "60px", paddingBottom: "60px", height: "100vh" }}
     >
       <p
         style={{
@@ -149,15 +149,17 @@ export default function Rsvp() {
           fontSize: "clamp(16px, 2vw, 22px)",
           letterSpacing: "0.05em",
           lineHeight: 1.6,
-          color: "#c58fab",
+          color: "#4e2038",
           textAlign: "center",
           maxWidth: "920px",
           marginBottom: "48px",
         }}
       >
         As a people of honor, we are very grateful to you for taking time to come
-        for our event. Kindly confirm your attendance as we are making plans to
-        ensure you have a very wonderful guest experience during our event.
+        for our event.  It means so much to us to have you celebrate with us.
+        Please confirm your attendance and kindly check your email for important details regarding the day.
+        {/* Kindly confirm your attendance as we are making plans to
+        ensure you have a very wonderful guest experience during our event. */}
       </p>
 
       <div className="w-full" style={{ maxWidth: "380px" }}>
@@ -251,7 +253,7 @@ export default function Rsvp() {
           className="mx-auto block"
           style={{
             fontFamily: "'Jost', sans-serif",
-            backgroundColor: "#b08fa0",
+            backgroundColor: "#6B1525",
             color: "#fff",
             padding: "12px 32px",
             borderRadius: "12px",

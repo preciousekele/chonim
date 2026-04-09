@@ -37,8 +37,8 @@ export default function ColorPalette() {
           fontFamily: "'Kugile', serif",
           fontWeight: 100,
           lineHeight: 0.8,
-          letterSpacing: "0.02em",
-          fontSize: "clamp(.5rem, 5vw, 9rem)",
+          letterSpacing: "0.12em",
+          fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
         }}
       >
         Dress Code

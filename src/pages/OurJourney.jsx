@@ -3,17 +3,17 @@ import { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
-    year: "God is the perfect matchmaker",
+    year: "How We Met",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/chonim10.jpeg",
   },
   {
-    year: "God is the perfect matchmaker",
+    year: "Engagement",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/chonim2.jpg",
   },
   {
-    year: "God is the perfect matchmaker",
+    year: "Times Together",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/chonim1.jpg",
   },
@@ -175,7 +175,7 @@ export default function OurJourney() {
     <>
       {/* ── MOBILE & TABLET (hidden on md+) ── */}
       <section
-        className="relative w-full bg-[#F7E7CE] overflow-hidden select-none md:hidden"
+        className="relative w-full bg-[#6B1525] overflow-hidden select-none md:hidden"
         style={{ height: mobileSlideH }}
       >
         {/* OUR JOURNEY header — pinned above the strip, always visible */}
@@ -189,6 +189,7 @@ export default function OurJourney() {
               lineHeight: 1,
               fontWeight: 200,
               fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
+              color: "#EDE4D5",
             }}
           >
             OUR STORY 
@@ -271,7 +272,7 @@ export default function OurJourney() {
                 {/* Text */}
                 <p
                   style={{
-                    color: "#9ca3af",
+                    color: "#EDE4D5",
                     fontFamily: "neue-sans, sans-serif",
                     fontSize: "clamp(0.95rem, 4vw, 1.2rem)",
                     fontWeight: 100,

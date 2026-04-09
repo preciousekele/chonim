@@ -247,7 +247,8 @@ const streams = [
 
 export default function Streaming() {
   return (
-    <div className="relative w-full bg-white overflow-hidden flex flex-col items-center justify-center px-6 py-8 md:py-16">
+    <div className="relative h-full w-full bg-white overflow-hidden flex flex-col items-center justify-center px-6 py-8 md:py-16"
+    style={{ paddingTop: "", paddingBottom: "60px", height: "100vh" }}>
       {/* LAYER 1 — photos behind content */}
       {slots
         .filter((s) => s.layer === "back")
@@ -290,15 +291,15 @@ export default function Streaming() {
 
         {/* Subtext */}
         <p
-          className="text-gray-400 text-center mb-20"
+          className="text-gray-600 text-center mb-20"
           style={{
             fontFamily: "Playfair Display, serif",
             fontWeight: 300,
-            fontSize: "clamp(10px, 2vw, 14px)",
+            fontSize: "clamp(14px, 2vw, 14px)",
             letterSpacing: "0.25em",
           }}
         >
-          Join us live wherever you are
+          To all our family unable to join us in person, celebrate with us on our YouTube & Instagram
         </p>
 
         {/* Date + Times */}
@@ -308,7 +309,7 @@ export default function Streaming() {
             style={{
               fontFamily: "'Vonique64', serif",
               fontWeight: 600,
-              fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)",
+              fontSize: "clamp(1.3rem, 3.5vw, 2.4rem)",
               letterSpacing: "0.15em",
             }}
           >
@@ -324,7 +325,7 @@ export default function Streaming() {
                 <span
                   className="uppercase text-gray-400 tracking-widest"
                   style={{
-                    fontSize: "clamp(7px, 1.8vw, 10px)",
+                    fontSize: "clamp(9px, 1.8vw, 10px)",
                     fontWeight: 300,
                     letterSpacing: "0.3em",
                     fontFamily: "'Montserrat', sans-serif",
@@ -335,7 +336,7 @@ export default function Streaming() {
                 <span
                   className="text-gray-800 tracking-widest"
                   style={{
-                    fontSize: "clamp(11px, 1.5vw, 15px)",
+                    fontSize: "clamp(13px, 1.5vw, 15px)",
                     fontWeight: 500,
                   }}
                 >
@@ -414,7 +415,7 @@ export default function Streaming() {
               fontStyle: "italic",
             }}
           >
-            #ChokoWedsNimechi
+            #Alovewhichknowsnoending
           </p>
         </div>
       </div>

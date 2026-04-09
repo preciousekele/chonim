@@ -11,9 +11,16 @@ const accounts = [
   {
     country: "United Kingdom",
     currency: "(£)",
-    name: "Choko & Nimechi",
-    number: "12345678",
+    name: "Anomnimechi Nneoma Ugorji",
+    number: "83430847",
     bank: "Barclays Bank",
+  },
+  {
+    country: "United Kingdom",
+    currency: "(£)",
+    name: "Anomnimechi Nneoma Ugorji",
+    number: "anomnimechiugorji@gmail.com",
+    bank: "PayPal Bank",
   },
 ];
 
@@ -27,7 +34,7 @@ function AccountCard({ account }) {
   };
 
   return (
-    <div className="flex flex-col gap-5 px-10 py-10 border border-pink-200 w-full max-w-sm">
+    <div className="flex flex-col gap-5 px-10 py-10 border border-gray-400 w-full max-w-sm">
       {/* Country & Currency */}
       <div>
         <p
@@ -57,12 +64,13 @@ function AccountCard({ account }) {
       </div>
 
       {/* Account Number */}
+      {/* Account Number / Email */}
       <div>
         <p
           className="text-xs uppercase tracking-widest text-gray-700 mb-1"
           style={{ fontWeight: 300 }}
         >
-          Account No.
+          {account.bank === "Paypal Bank" ? "Email" : "Account No."}
         </p>
         <div className="flex items-center gap-3">
           <p
@@ -125,20 +133,21 @@ function AccountCard({ account }) {
 export default function Registry() {
   return (
     <div
-  className="flex flex-col items-center justify-center px-6 py-8 md:py-32"
-  style={{
-    background: "linear-gradient(to top right, #FFFFF0, #E8DCC8)",
-  }}
->
+      className="flex flex-col items-center justify-center px-6 py-8 md:py-32"
+      style={{
+        background: "linear-gradient(to top right, #FFFFF0, #E8DCC8)",
+      }}
+    >
       {/* Heading */}
       <h1
-        className="uppercase text-gray-900 text-center mb-4"
+        className="uppercase text-center mb-4"
         style={{
           fontFamily: "'Kugile', serif",
-          fontWeight: 100,
+          fontWeight: 400,
           lineHeight: 0.8,
-          letterSpacing: "0.02em",
-          fontSize: "clamp(.5rem, 5vw, 9rem)",
+          letterSpacing: "0.12em",
+          fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
+          color: '#6B1525',
         }}
       >
         GIFTINGS

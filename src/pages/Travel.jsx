@@ -31,11 +31,17 @@ const hotels = [
     area: "Area 1, Abuja",
     website: "https://citilodgehotel.com/",
   },
+  {
+    name: "Wali's Suites",
+    location: "21 Monrovia Street, Wuse 2, Abuja",
+    area: "Wuse 2, Abuja",
+    website: "https://walisng.com/",
+  },
 ];
 
 function HotelCard({ hotel }) {
   return (
-    <div className="flex flex-col gap-5 px-10 py-10 border border-pink-200 w-full max-w-sm">
+    <div className="flex flex-col gap-5 px-10 py-10 border border-gray-400 w-full max-w-sm">
       {/* Area */}
       <div>
         <p
@@ -89,12 +95,12 @@ function HotelCard({ hotel }) {
           className="text-xs uppercase tracking-widest transition-colors duration-200"
           style={{
             fontWeight: 300,
-            color: "black",
+            color: "#6B1525",
             letterSpacing: "0.3em",
             textDecoration: "none",
           }}
-          onMouseEnter={(e) => (e.target.style.color = "gray")}
-          onMouseLeave={(e) => (e.target.style.color = "black")}
+          onMouseEnter={(e) => (e.target.style.color = "#6B1525")}
+          onMouseLeave={(e) => (e.target.style.color = "#6B1525")}
         >
           View & Book →
         </a>
@@ -120,7 +126,7 @@ export const Travel = () => {
           lineHeight: 0.8,
           letterSpacing: "0.02em",
           fontSize: "clamp(.5rem, 5vw, 9rem)",
-          color: "#5a3a3a",
+          color: "#6B1525",
         }}
       >
         Travel & Accommodation
