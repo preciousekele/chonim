@@ -12,6 +12,7 @@ import Streaming from './pages/Streaming'
 // import BackgroundMusic from './components/BackgroundMusic'
 import { Travel } from './pages/Travel'
 import WeddingDetails from './pages/WeddingDetails'
+import ConnectNim from './pages/ConnectNim'
 
 export default function App() {
   const [activePage, setActivePage] = useState(null)
@@ -51,8 +52,9 @@ export default function App() {
           <Header />
           <Navbar />
           <section id="home"><Home /></section>
-          <section id="our-journey"><OurJourney /></section>
+          {/* <section id="our-journey"><OurJourney /></section> */}
           <section id="connect"><Connect /></section>
+          <section id="connect-nim"><ConnectNim /></section>
           {/* <section id="giftings"><Registry /></section> */}
           <section id="wedding-details">
             <WeddingDetails onNavigate={navigateTo} />

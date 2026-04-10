@@ -151,12 +151,11 @@ export default function Rsvp() {
           lineHeight: 1.6,
           color: "#4e2038",
           textAlign: "center",
-          maxWidth: "920px",
           marginBottom: "48px",
         }}
       >
         As a people of honor, we are very grateful to you for taking time to come
-        for our event.  It means so much to us to have you celebrate with us.
+        for our event. <br /> It means so much to us to have you celebrate with us. <br />
         Please confirm your attendance and kindly check your email for important details regarding the day.
         {/* Kindly confirm your attendance as we are making plans to
         ensure you have a very wonderful guest experience during our event. */}

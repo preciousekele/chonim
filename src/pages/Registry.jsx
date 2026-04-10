@@ -164,14 +164,15 @@ export default function Registry() {
 
       {/* Subtext */}
       <p
-        className="text-gray-600 tracking-widest text-center mb-16"
+        className="text-gray-800 tracking-widest text-center mb-16"
         style={{
           fontWeight: 300,
-          fontSize: "clamp(14px, 1vw, 13px)",
-          letterSpacing: "0.2em",
+          fontSize: "clamp(16px, 1vw, 16px)",
+          letterSpacing: "0..08em",
+          textAlign: "center",
         }}
       >
-        We are deeply grateful to celebrate this special day with you. Your presence means everything to us. For those who wish to give, we would kindly prefer a cash gift rather than physical items, as we start our journey together
+        We are deeply grateful to celebrate this special day with you. <br /> Your presence means everything to us. <br /> For those who wish to give, we would kindly prefer a cash gift rather than physical items, as we start our journey together
       </p>
 
       {/* Cards */}

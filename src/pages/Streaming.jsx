@@ -81,7 +81,7 @@ export default function Streaming() {
             fontWeight: 400,
             lineHeight: 0.8,
             letterSpacing: "0.12em",
-            fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
+            fontSize: "clamp(1.1rem, 6vw, 1.7rem)",
             color: "#6B1525",
           }}
         >
@@ -94,11 +94,11 @@ export default function Streaming() {
           style={{
             fontFamily: "Playfair Display, serif",
             fontWeight: 300,
-            fontSize: "clamp(14px, 2vw, 14px)",
+            fontSize: "clamp(14px, 2vw, 18px)",
             letterSpacing: "0.25em",
           }}
         >
-          To all our Family and Friends across the globe who can’t 
+          To all our Families and Friends across the globe who can’t 
           be with us in person, join the celebration via YouTube or Instagram!
         </p>
 

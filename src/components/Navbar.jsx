@@ -3,7 +3,7 @@ export default function Navbar() {
     <nav className="fixed top-14 left-0 w-full z-50 hidden md:flex items-center justify-center gap-10 py-5 backdrop-blur-sm">
       {[
         { label: "Home", to: "home" },
-        { label: "Our Journey", to: "our-journey" },
+        { label: "Our Story", to: "our-journey" },
         // { label: "Giftings", to: "giftings" },
         { label: "Wedding Details", to: "wedding-details" },
       ].map((link) => (

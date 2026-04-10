@@ -1,24 +1,24 @@
 import { useEffect, useRef } from "react";
 
 const profiles = [
+//   {
+//     name: "CHOKO",
+//     side: "left",
+//     imageSrc: "/chonim5.jpeg",
+//     igLink: "https://instagram.com/choko",
+//     description:
+//       "Choko is a loving and audacious soul, with a heart deeply rooted in faith. A natural leader who brings people together, his adventurous spirit balances with a deep, compassionate love that makes him the rock for his family.",
+//     connectLabel: "Connect with Choko",
+//   },
   {
-    name: "CHOKO",
-    side: "left",
-    imageSrc: "/chonim5.jpeg",
-    igLink: "https://instagram.com/choko",
+    name: "NIMECHI",
+    side: "right",
+    imageSrc: "/NimStory.jpg",
+    igLink: "https://instagram.com/nimechi",
     description:
-      "Choko is a loving and audacious soul, with a heart deeply rooted in faith. A natural leader who brings people together, his adventurous spirit balances with a deep, compassionate love that makes him the rock for his family.",
-    connectLabel: "Connect with Choko",
+      "Nimechi is the embodiment of kindness, faith, and creativity. With a passion for interiors and design, she transforms spaces into reflections of beauty. Her warm spirit and compassionate heart are a source of joy to everyone she meets.",
+    connectLabel: "Connect with Nimechi",
   },
-  // {
-  //   name: "NIMECHI",
-  //   side: "right",
-  //   imageSrc: "/chonim9.jpeg",
-  //   igLink: "https://instagram.com/nimechi",
-  //   description:
-  //     "Nimechi is the embodiment of kindness, faith, and creativity. With a passion for interiors and design, she transforms spaces into reflections of beauty. Her warm spirit and compassionate heart are a source of joy to everyone she meets.",
-  //   connectLabel: "Connect with Nimechi",
-  // },
 ];
 
 function ProfileCard({ profile, index }) {
@@ -120,7 +120,7 @@ function ProfileCard({ profile, index }) {
             <img
               src={profile.imageSrc}
               alt={profile.name}
-              className="w-full h-full object-cover scale-100"
+              className="w-full h-full object-cover scale-105"
             />
           </div>
 
@@ -147,11 +147,7 @@ function ProfileCard({ profile, index }) {
         <div className="flex flex-col gap-5 md:gap-6 w-full max-w-[900px] mt-4 md:mt-0">
           <p
             className="leading-relaxed text-lg md:text-3xl text-justify"
-            style={{
-              fontFamily: "'Jost', sans-serif",
-              fontWeight: 300,
-              color: "#EDE4D5",
-            }}
+            style={{ fontFamily: "'Jost', sans-serif", fontWeight: 300, color: "#6B1525" }}
           >
             {profile.description}
           </p>
@@ -160,8 +156,9 @@ function ProfileCard({ profile, index }) {
             href={profile.igLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-200 inline-block text-base tracking-widest border-b border-gray-200 pb-0.5 w-fit hover:text-gray-200 hover:border-gray-200 transition-colors duration-300"
-            style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400 }}
+            className="inline-block text-base tracking-widest border-b border-gray-900 pb-0.5 w-fit hover:text-gray-700 hover:border-gray-900 transition-colors duration-300"
+            style={{ fontFamily: "'Jost', sans-serif",
+               fontWeight: 400 }}
           >
             {profile.connectLabel}
           </a>
@@ -171,68 +168,13 @@ function ProfileCard({ profile, index }) {
   );
 }
 
-export default function Connect() {
+export default function ConnectNim() {
   return (
-    <main className="bg-[#3D0A14] min-h-screen pt-2 md:pt-14 pb-16">
+    <main className="bg-[#EDE4D5] min-h-screen pt-8 md:pt-16 pb-16">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap');
       `}</style>
 
-      {/* OUR STORY Header */}
-      {/* <div className="flex justify-center items-center pt-6 md:pt-2 px-4">
-        <h2
-          className="tracking-widest uppercase font-light text-center whitespace-nowrap"
-          style={{
-            fontFamily: "'Kugile', serif",
-            fontWeight: 400,
-            lineHeight: 0.8,
-            letterSpacing: "0.12em",
-            fontSize: "clamp(0.55rem, 3.2vw, 1.5rem)",
-            color: "#EDE4D5",
-          }}
-        >
-          Our Journey to <span 
-          className="tracking-widest uppercase font-light text-center whitespace-nowrap"
-          style={{
-            fontFamily: "'Kugile', serif",
-            fontWeight: 400,
-            lineHeight: 0.8,
-            letterSpacing: "0.12em",
-            fontSize: "clamp(0.75rem, 4.5vw, 1.9rem)",
-            color: "#EDE4D5",
-          }}>#ALoveUnending</span>
-        </h2>
-      </div> */}
-      <div className="flex justify-center items-center pt-6 md:pt-2 px-4">
-        <h2
-          className="tracking-widest uppercase font-light text-center"
-          style={{
-            fontFamily: "'Kugile', serif",
-            fontWeight: 400,
-            letterSpacing: "0.12em",
-            color: "#EDE4D5",
-          }}
-        >
-          <span
-            className="block mb-4"
-            style={{
-              fontSize: "clamp(0.55rem, 4.7vw, 1.7rem)",
-              lineHeight: 1.4,
-            }}
-          >
-            Our Journey to
-          </span>
-          <span
-            className="block -mb-4 md:-mb-2"
-            style={{
-              fontSize: "clamp(1.75rem, 5.5vw, 2.9rem)",
-              lineHeight: 1.2,
-            }}
-          >
-            #ALoveUnending
-          </span>
-        </h2>
-      </div>
       {profiles.map((profile, i) => (
         <ProfileCard key={profile.name} profile={profile} index={i} />
       ))}
