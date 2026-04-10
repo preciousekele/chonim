@@ -14,7 +14,7 @@ const profiles = [
     name: "NIMECHI",
     side: "right",
     imageSrc: "/NimStory.jpg",
-    igLink: "https://instagram.com/nimechi",
+    igLink: "https://www.instagram.com/anomnimechi?igsh=NWdmYzBwM3Npdngy&utm_source=qr",
     description:
       "Nimechi is the embodiment of kindness, faith, and creativity. With a passion for interiors and design, she transforms spaces into reflections of beauty. Her warm spirit and compassionate heart are a source of joy to everyone she meets.",
     connectLabel: "Connect with Nimechi",

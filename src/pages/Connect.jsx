@@ -5,7 +5,7 @@ const profiles = [
     name: "CHOKO",
     side: "left",
     imageSrc: "/chonim5.jpeg",
-    igLink: "https://instagram.com/choko",
+    igLink: "https://www.instagram.com/choko_gabriel?igsh=MXZzbjhqcWw5cjgxNQ==",
     description:
       "Choko is a loving and audacious soul, with a heart deeply rooted in faith. A natural leader who brings people together, his adventurous spirit balances with a deep, compassionate love that makes him the rock for his family.",
     connectLabel: "Connect with Choko",
