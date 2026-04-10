@@ -13,7 +13,7 @@ export default function WeddingDetails({ onNavigate }) {
   return (
     <div style={{
       minHeight: "80vh",
-      background: "#6B1525",
+      background: "#3D0A14",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -62,7 +62,7 @@ export default function WeddingDetails({ onNavigate }) {
               alignItems: "center",
               justifyContent: "space-between",
               background: "#EDE4D5",
-              color: "#6B1525",
+              color: "#3D0A14",
               border: "none",
               borderRadius: "6px",
               padding: "1rem 1.25rem",
