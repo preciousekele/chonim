@@ -4,9 +4,9 @@ const accounts = [
   {
     country: "Nigeria",
     currency: "(₦)",
-    name: "Choko & Nimechi",
-    number: "0123456789",
-    bank: "First Bank of Nigeria",
+    name: "Ekele Gbariel O.",
+    number: "0025008398",
+    bank: "GTBANK",
   },
   {
     country: "United Kingdom",
