@@ -160,8 +160,8 @@ function ProfileCard({ profile, index }) {
             href={profile.igLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-200 inline-block text-base tracking-widest border-b border-gray-200 pb-0.5 w-fit hover:text-gray-200 hover:border-gray-200 transition-colors duration-300"
-            style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400 }}
+            className="text-gray-200 inline-block text-base tracking-widest border-b  pb-0.5 w-fit hover:text-gray-200 hover:border-gray-200 transition-colors duration-300"
+            style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, color: "#d4a0a8", borderColor: "#d4a0a8" }}
           >
             {profile.connectLabel}
           </a>

@@ -157,8 +157,7 @@ function ProfileCard({ profile, index }) {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-base tracking-widest border-b border-gray-900 pb-0.5 w-fit hover:text-gray-700 hover:border-gray-900 transition-colors duration-300"
-            style={{ fontFamily: "'Jost', sans-serif",
-               fontWeight: 400 }}
+            style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, color: "#a0666f", borderColor: "#d4a0a8" }}
           >
             {profile.connectLabel}
           </a>
