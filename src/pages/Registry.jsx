@@ -4,7 +4,7 @@ const accounts = [
   {
     country: "Nigeria",
     currency: "(₦)",
-    name: "Ekele Gbariel O.",
+    name: "Ekele Gariel O.",
     number: "0025008398",
     bank: "GTBANK",
   },
