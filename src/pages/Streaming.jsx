@@ -98,8 +98,8 @@ export default function Streaming() {
             letterSpacing: "0.25em",
           }}
         >
-          To all our Family and Friends around the world who are unable to
-          attend in person, celebrate with us on our YouTube or Instagram
+          To all our Family and Friends across the globe who can’t 
+          be with us in person, join the celebration via YouTube or Instagram!
         </p>
 
         {/* Date + Times */}

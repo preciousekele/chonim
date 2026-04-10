@@ -4,7 +4,7 @@ export default function Navbar() {
       {[
         { label: "Home", to: "home" },
         { label: "Our Journey", to: "our-journey" },
-        { label: "Giftings", to: "giftings" },
+        // { label: "Giftings", to: "giftings" },
         { label: "Wedding Details", to: "wedding-details" },
       ].map((link) => (
         <a

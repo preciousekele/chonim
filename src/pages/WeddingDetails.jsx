@@ -5,6 +5,7 @@ export default function WeddingDetails({ onNavigate }) {
     { label: "RSVP", key: "rsvp" },
     { label: "Dress Code", key: "dresscode" },
     { label: "Live Streaming", key: "streaming" },
+    { label: "Gifts", key: "giftings" },
     { label: "Travel & Accommodation", key: "travel" },
     { label: "Gallery", key: "moments" },
   ];

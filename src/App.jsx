@@ -44,6 +44,7 @@ export default function App() {
       {activePage === 'travel' && <Travel onBack={goBack} />}
       {activePage === 'moments' && <Moments onBack={goBack} />}
       {activePage === 'streaming' && <Streaming onBack={goBack} />}
+      {activePage === 'giftings' && <Registry onBack={goBack} />}
 
       {!activePage && (
         <>
@@ -51,7 +52,8 @@ export default function App() {
           <Navbar />
           <section id="home"><Home /></section>
           <section id="our-journey"><OurJourney /></section>
-          <section id="giftings"><Registry /></section>
+          <section id="connect"><Connect /></section>
+          {/* <section id="giftings"><Registry /></section> */}
           <section id="wedding-details">
             <WeddingDetails onNavigate={navigateTo} />
           </section>

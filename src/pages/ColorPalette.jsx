@@ -20,7 +20,6 @@ export default function ColorPalette() {
     { label: "Taupe", shades: shades.slice(0, 3) },
     { label: "Burgundy", shades: shades.slice(3, 6) },
     { label: "Nude", shades: shades.slice(6, 9) },
-    { label: "Black & Neutral", shades: shades.slice(9, 12) },
   ];
 
   return (
@@ -47,7 +46,7 @@ export default function ColorPalette() {
           letterSpacing: "0.3em",
         }}
       >
-        Dress elegantly flamboyant in rich African fabric in any of the following colours
+        Dress elegantly flamboyant in rich African attire in any of the following colours
       </p>
 
       {/* Groups */}
@@ -62,7 +61,7 @@ export default function ColorPalette() {
                   title={shade.name}
                   style={{
                     backgroundColor: shade.hex,
-                    width: "clamp(36px, 4vw, 56px)",
+                    width: "clamp(38px, 4vw, 56px)",
                     height: "clamp(80px, 12vw, 140px)",
                     borderRadius: "999px",
                     flexShrink: 0,
@@ -77,7 +76,7 @@ export default function ColorPalette() {
               className="uppercase text-gray-400 text-center"
               style={{
                 fontWeight: 300,
-                fontSize: "clamp(10px, 0.9vw, 12px)",
+                fontSize: "clamp(11px, 0.9vw, 12px)",
                 letterSpacing: "0.3em",
               }}
             >
@@ -86,7 +85,7 @@ export default function ColorPalette() {
           </div>
         ))}
       </div>
-      <p
+      {/* <p
         className="text-gray-500 text-center mt-16"
         style={{
           // fontFamily: "'SymphonieCalligraphy', cursive",
@@ -100,7 +99,7 @@ export default function ColorPalette() {
       >
         Dress in Taupe, Nude shades and Burgundy
         in our rich African Attire
-      </p>
+      </p> */}
     </div>
   );
 }

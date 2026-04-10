@@ -159,7 +159,7 @@ export default function Registry() {
           color: "#6B1525",
         }}
       >
-        GIFTINGS
+        GIFTS
       </h1>
 
       {/* Subtext */}

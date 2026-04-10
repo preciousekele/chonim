@@ -156,8 +156,9 @@ function ProfileCard({ profile, index }) {
             href={profile.igLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-base tracking-widest text-gray-900 border-b border-gray-900 pb-0.5 w-fit hover:text-gray-700 hover:border-gray-900 transition-colors duration-300"
-            style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400 }}
+            className="inline-block text-base tracking-widest border-b border-gray-900 pb-0.5 w-fit hover:text-gray-700 hover:border-gray-900 transition-colors duration-300"
+            style={{ fontFamily: "'Jost', sans-serif",
+               fontWeight: 400 }}
           >
             {profile.connectLabel}
           </a>
@@ -169,7 +170,7 @@ function ProfileCard({ profile, index }) {
 
 export default function Connect() {
   return (
-    <main className="bg-[#f9f7f6] min-h-screen pt-2 md:pt-14 pb-16">
+    <main className="bg-[#EDE4D5] min-h-screen pt-2 md:pt-14 pb-16">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap');
       `}</style>
