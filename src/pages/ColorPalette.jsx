@@ -85,6 +85,21 @@ export default function ColorPalette() {
           </div>
         ))}
       </div>
+
+       <div className="w-full flex justify-center mt-12 md:mt-16">
+        <img
+          src="/colorpallete.jpeg"
+          alt="Colour palette inspiration"
+          className="w-full max-w-2xl rounded-xl object-cover shadow-lg"
+        />
+      </div>
+      <div className="w-full flex justify-center mt-12 md:mt-16">
+        <img
+          src="/colorpallete2.jpeg"
+          alt="Colour palette inspiration"
+          className="w-full max-w-2xl rounded-xl object-cover shadow-lg"
+        />
+      </div>
       {/* <p
         className="text-gray-500 text-center mt-16"
         style={{

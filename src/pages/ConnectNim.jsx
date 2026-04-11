@@ -13,7 +13,7 @@ const profiles = [
   {
     name: "NIMECHI",
     side: "right",
-    imageSrc: "/chonim6.jpeg",
+    imageSrc: "/chonim15.jpeg",
     igLink:
       "https://www.instagram.com/anomnimechi?igsh=NWdmYzBwM3Npdngy&utm_source=qr",
     connectLabel: "Connect with Nimechi",
@@ -49,7 +49,7 @@ function ProfileCard({ profile, index }) {
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div
-        className={`flex flex-col md:flex-row items-center gap-0 md:gap-24 w-full max-w-6xl ${
+        className={`flex flex-col md:flex-row items-start gap-0 md:gap-24 w-full max-w-6xl ${
           !isLeft ? "md:flex-row-reverse" : ""
         }`}
       >
@@ -183,7 +183,7 @@ function NimechiStory() {
         .dialogue-line {
           font-family: 'Cormorant Garamond', serif;
           font-style: italic;
-          font-size: clamp(1rem, 2.5vw, 1.15rem);
+          font-size: clamp(1.1rem, 2.5vw, 1.15rem);
           font-weight: 300;
           color: #6B1525;
           border-left: 1.5px solid #d4a0a8;
@@ -194,12 +194,20 @@ function NimechiStory() {
         .chapter-head {
           font-family: 'Cormorant Garamond', serif;
           font-style: italic;
-          font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+          font-size: clamp(1.4rem, 2.5vw, 1.5rem);
           font-weight: 500;
-          color: #6B1525;
+          color: #4A0E1A;
           border-left: 2px solid #d4a0a8;
           padding-left: 1rem;
           margin: 1.8rem 0 0.9rem;
+          line-height: 1.4;
+        }
+          .chapter-begining {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(1.35rem, 2.5vw, 1.5rem);
+          font-weight: 500;
+          color: #4A0E1A;
+          padding-left: .2rem;
           line-height: 1.4;
         }
         .story-divider {
@@ -212,7 +220,7 @@ function NimechiStory() {
           font-family: 'Jost', sans-serif;
           font-weight: 300;
           font-size: clamp(1.1rem, 2vw, 1rem);
-          line-height: 1.95;
+          line-height: 1.75;
           color: #5a1020;
           margin-bottom: 0.75rem;
           text-align: justify;
@@ -225,55 +233,63 @@ function NimechiStory() {
 
       {/* Opening */}
       <p className="story-p" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "clamp(1rem, 2.5vw, 1.2rem)" }}>
-        <strong style={{ fontStyle: "normal", color: "#6B1525", fontSize: "clamp(1.3rem, 2vw, 1rem)" }}>"In the most ordinary moment… God was writing something extraordinary."</strong>
+        <strong style={{ fontStyle: "normal", fontWeight: "500", color: "#4A0E1A", fontSize: "clamp(1.4rem, 2vw, 1rem)" }}>
+          "In the most ordinary moment, God was writing something beautiful."
+        </strong>
       </p>
 
       <div className="story-divider" />
 
-      <p className="story-p">It was a Monday morning — the 17th of September, 2024. I was heading back to the UK from Nigeria, fresh from my immediate elder sister's wedding. The whole trip had been full — love, family, celebration… and then suddenly, it was over.</p>
-      <p className="story-p">By the time we landed in London that evening, my mind was on one thing: cross immigration, pick my bags, and continue my journey. Nothing fancy. No expectations.</p>
-      <p className="story-p">And let me be honest — <span className="aside-text">I was not looking my stunning self at all. I didn't look like a lady ready to be toasted 😩🤣.</span> I wore whatever I could find that morning. No effort, no coordination… just survival mode.</p>
-      <p className="story-p">At the baggage carousel, something caught my attention. I saw Apostle Joshua Selman, Pastor Kayode, Lekan, and a few familiar Koinonia faces. Immediately, my energy changed — imagine being on the same flight and only realising after landing! So there I stood, too shy to even go and greet Apostle.</p>
-      <p className="story-p">One by one, the crowd reduced. Then this young man walked up to me and said, jokingly:</p>
+      <p className="story-p">It was the morning of 17th September 2024. I was heading back to the UK from Nigeria after my immediate elder sister's wedding. The whole trip had been filled with fun, food, love, and celebration with family and friends. Then suddenly, it was time to return to work and life in the UK.</p>
+      <p className="story-p">By the time we landed in London that evening, my mind was on one thing. I just wanted to get through immigration, pick up my bags, and continue my journey. And if I'm being honest, I was not looking my best at all. I wore whatever I could find that morning. No effort, no coordination, just survival. I honestly was not looking "toastable" 😂</p>
+      <p className="story-p">At the Heathrow airport baggage carousel, something caught my attention. I saw Apostle Joshua Selman, Pastor Kayode, and a few familiar faces from Koinonia. I became excited immediately. Imagine being on the same flight and only realising after landing. But I was too shy to go and greet them. So I just stood there, waiting for my bags.</p>
+      <p className="story-p">The crowd began to reduce. One by one, people picked up their bags and left until only a few of us remained. Then a young man walked up to me and said jokingly:</p>
       <span className="dialogue-line">"It seems they left our bags in Abuja."</span>
-      <p className="story-p">I didn't even think twice —</p>
-      <span className="dialogue-line">"Please oh! Nigeria cannot happen to us."</span>
-      <p className="story-p">We both laughed. And just like that… a conversation started.</p>
+      <p className="story-p">I replied immediately</p>
+      <span className="dialogue-line">"Please oh, Nigeria cannot happen to us."</span>
+      <p className="story-p">We both laughed, and just like that, we started talking...</p>
 
       <div className="story-divider" />
-      <div className="chapter-head">From small talk… to something more.</div>
+      <div className="chapter-head">Just a conversation, or so I thought.</div>
 
-      <p className="story-p">I asked if he lived in the UK — he said no, he had come for a conference. I told him I live here, but had come back only for my sister's wedding and was already heading back early for Sound of Revival. He was surprised. <span className="aside-text">(As a doctor, when you cancel last minute, it disrupts everyone's day… how much more the house of God? But of course, he didn't know all that about me yet.)</span></p>
-      <p className="story-p">And then we realised — we were both there for the same conference. That instant ease. That familiar feeling.</p>
-      <p className="story-p">Then our bags came out. The moment was ending. But something in me didn't want it to just pass like that. So I asked for his number — just to make sure he got to where he was staying safely. We said our goodbyes with a simple hope: <em>"See you at the conference".</em></p>
-
-      <div className="story-divider" />
-      <div className="chapter-head">A second look… and a surprise.</div>
-
-      <p className="story-p">The next morning, I sent a quick check-in. He replied kindly. At the conference, we saw each other briefly — just a "hello, hi." Until the last day.</p>
-      <p className="story-p">I was doing my patrol medical duties, minding my business, when I looked up — and there he was. On the keyboard. I actually paused. <em>Wait… what is He doing there???</em></p>
-      <span className="dialogue-line">"Surprise surprise… I just saw you on the keyboard. I didn't know you were 'Apostle's Keyboardist' 🤣🤣🤣 — I would not even pass you for someone that sings or likes music 😂😂😂."</span>
-      <p className="story-p">He replied, laughing, saying I was partially right — he doesn't even sing. I said:</p>
-      <span className="dialogue-line">"So what is the mic doing in front of you then???"</span>
-      <p className="story-p">He explained… and honestly, that was the end of that conversation. Or so I thought.</p>
+      <p className="story-p">I asked if he lived in the UK. He said no. He told me he had come for a conference. I said I lived in the UK, but had travelled to Nigeria and returned early for a conference called Sound of Revival UK. When I told him I had only gone for my sister's wedding and was already heading back, he was surprised. He said that was barely three days.</p>
+      <p className="story-p">I explained that I had responsibilities. I was part of the medical workforce in Koinonia UK and had already been placed on the rota. I did not want to cancel or let anyone down. Besides, this was service to God and should not be trivialised. He simply said, <em>"Oh wow."</em></p>
+      <p className="story-p">Then we realised we were both attending the same conference. At that point, it became: <em>"Oh my brother! Oh my sister!"</em> There was an instant ease. It felt familiar. It felt like home.</p>
+      <p className="story-p">I remember talking excitedly about how I had seen Apostle Joshua Selman and others I recognised from service. I was just talking freely, not even aware of what his own role was.</p>
+      <p className="story-p">Then our bags came out, and just like that, the moment was ending. But something in me did not want it to just pass. So we decided to exchange numbers. Nothing serious. I just wanted to make sure he got to where he was staying safely, since he was only visiting the UK. We said our goodbyes with a simple hope:</p>
+      <span className="dialogue-line">"See you at the conference."</span>
 
       <div className="story-divider" />
-      <div className="chapter-head">The conversation that changed everything.</div>
+      <div className="chapter-head">A second meeting and an unexpected surprise.</div>
 
-      <p className="story-p">The next day, I checked in again. And he said something simple… but it stayed with me:</p>
-      <span className="dialogue-line">"We didn't even get to talk…"</span>
-      <p className="story-p">And it was true. So when he asked if he could call me after work, I said okay.</p>
-      <p className="story-p">That call… was not a small call. We spoke from around 10pm till 4am. Non-stop. I still can't fully explain it, but it just felt easy. Natural. Peaceful. Like something was aligning without effort. We laughed. We talked. We cried — oh yes we did! We connected… properly this time.</p>
-      <p className="story-p">And somewhere between 10pm and 4am… God quietly began writing our story.</p>
+      <p className="story-p">The next morning, I sent him a message just to check on him. He replied, <em>"I'm well, and you?"</em> At the conference later that day, we saw each other briefly. We exchanged pleasantries, just hello and hi, nothing deep.</p>
+      <p className="story-p">Then on the last day, while I was carrying out my duties, patrolling the gallery and ensuring everyone was safe, I looked up and saw him on the keyboard. I paused. I was shocked. I said to myself, <em>what is this guy doing there?</em></p>
+      <p className="story-p">So I messaged him after service:</p>
+      <span className="dialogue-line">"Surprise, surprise. I just saw you on the keyboard. I didn't know you were into music, interesting." <span className="aside-text">(I still did not put two and two together that he was Apostle's keyboardist.)</span></span>
+      <p className="story-p">I even teased him and said I would not have taken him for someone who sings or even likes music. He replied and said I was partially right because he does not sing. I asked:</p>
+      <span className="dialogue-line">"So what is the mic doing in front of you?"</span>
+      <p className="story-p">He explained… and honestly, that was the end of that conversation. Or so I thought 😁</p>
 
       <div className="story-divider" />
-      <div className="chapter-head" style={{ borderLeft: "none", paddingLeft: 0 }}>The beginning of forever.</div>
+      <div className="chapter-head">The conversation that changed everything</div>
+
+      <p className="story-p">The next time which was not many days after, I checked in again, at this point they had gotten back to Nigeria. Then he said something simple:</p>
+      <span className="dialogue-line">"We didn't even get to talk….."</span>
+      <p className="story-p">And it was true. We really didn't. So when he asked if he could call me after work, I said yes.</p>
+      <p className="story-p">That call was not a small call, men and brethren 😂😂😂😂. We spoke from around 10pm until 4am, non-stop. That was when I found out, after hours of talking, that he played the keyboard for Apostle Joshua Selman. That midnight call felt easy, natural, and peaceful. We laughed. We talked. We cried. And we truly connected.</p>
+      <p className="story-p">And somewhere between 10pm and 4am, something began <span className="chapter-begining">The beginning of Nimechi and Choko.</span> </p>
+
+      <div className="story-divider" />
+      {/* <div className="chapter-head" style={{ borderLeft: "none", paddingLeft: 0 }}>The beginning of forever.</div> */}
 
       <p className="story-p" style={{ textAlign: "center" }}>
-        A random Monday. An airport. A joke about missing bags.<br />
-        Nothing planned. Nothing staged.<br />
-        But somehow, in that very ordinary moment… God was already at work.<br /><br />
-        <em>And the rest, as they say, is history 🤍</em>
+        Looking back now, it is funny how it all started.<br />
+        A random Monday. An airport.<br />
+        A simple joke about our beloved country Nigeria and missing bags.<br />
+        Nothing planned. Nothing forced. No flamboyant dress up.<br /><br />
+        But somehow, in that very ordinary moment, God was already at work.<br /><br />
+        <em>And the rest, as they say, is history 🤍</em><br /><br />
+        <span className="aside-text">For more of our journey, connect with us below.</span>
       </p>
     </div>
   );
