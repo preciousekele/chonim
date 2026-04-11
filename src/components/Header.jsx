@@ -17,7 +17,7 @@ const Header = () => {
           fontSize: "clamp(26px, 1.8vw, 27px)",
         }}
       >
-        Choko &amp; Nimechi
+        Nimechi &amp; Choko
       </motion.p>
     </header>
   );

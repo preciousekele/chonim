@@ -211,7 +211,7 @@ function NimechiStory() {
         .story-p {
           font-family: 'Jost', sans-serif;
           font-weight: 300;
-          font-size: clamp(0.9rem, 2vw, 1rem);
+          font-size: clamp(1.1rem, 2vw, 1rem);
           line-height: 1.95;
           color: #5a1020;
           margin-bottom: 0.75rem;
@@ -225,7 +225,7 @@ function NimechiStory() {
 
       {/* Opening */}
       <p className="story-p" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "clamp(1rem, 2.5vw, 1.2rem)" }}>
-        <strong style={{ fontStyle: "normal", color: "#6B1525" }}>"In the most ordinary moment… God was writing something extraordinary."</strong>
+        <strong style={{ fontStyle: "normal", color: "#6B1525", fontSize: "clamp(1.3rem, 2vw, 1rem)" }}>"In the most ordinary moment… God was writing something extraordinary."</strong>
       </p>
 
       <div className="story-divider" />
