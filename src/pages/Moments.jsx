@@ -3,7 +3,7 @@ import { useState } from "react";
 const images = [
   {
     id: 1,
-    src: "/chonim1.jpg",
+    src: "/gallery3.jpeg",
     alt: "Family moment under pergola",
   },
   {
@@ -13,38 +13,53 @@ const images = [
   },
   {
     id: 3,
-    src: "/chonim6.jpeg",
-    alt: "Elegant portrait with Keyboard",
+    src: "/gallery11.jpeg",
+    alt: "Elegant portrait with keyboard",
   },
   {
     id: 4,
-    src: "/chonim12.jpeg",
+    src: "/chonim6.jpeg",
     alt: "Studio portrait with flower",
   },
   {
     id: 5,
-    src: "/chonim10.jpeg",
+    src: "/chonim13.jpeg",
     alt: "Couple close portrait",
   },
   {
     id: 6,
-    src: "/chonim3.jpeg",
+    src: "/gallery10.jpeg",
     alt: "Portrait outdoors",
   },
   {
-    id: 6,
-    src: "/chonim13.jpeg",
-    alt: "Portrait outdoors",
+    id: 7,
+    src: "/gallery6.jpeg",
+    alt: "Romantic embrace outdoors",
   },
   {
-    id: 6,
-    src: "/chonim7.jpeg",
-    alt: "Portrait outdoors",
+    id: 8,
+    src: "/gallery14.jpeg",
+    alt: "Candid laughter moment",
   },
   {
-    id: 6,
-    src: "/chonim14.jpeg",
-    alt: "Portrait outdoors",
+    id: 9,
+    src: "/gallery12.jpeg",
+    alt: "Sunset couple portrait",
+  },
+  {
+    id: 10,
+    src: "/NimStory.jpg",
+    alt: "Elegant wedding attire",
+  },
+  {
+    id: 11,
+    src: "/gallery9.jpeg",
+    alt: "Hands intertwined",
+  },
+  {
+    id: 12,
+    src: "/chonim10.jpeg",
+    alt: "Joyful celebration",
   },
 ];
 
