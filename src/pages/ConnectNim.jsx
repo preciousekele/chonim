@@ -13,7 +13,8 @@ const profiles = [
   {
     name: "NIMECHI",
     side: "right",
-    imageSrc: "/NimStory.jpg",
+    // imageSrc: "/NimStory.jpg",
+    imageSrc: "/chonim6.jpeg",
     igLink: "https://www.instagram.com/anomnimechi?igsh=NWdmYzBwM3Npdngy&utm_source=qr",
     description:
       "Nimechi is the embodiment of kindness, faith, and creativity. With a passion for interiors and design, she transforms spaces into reflections of beauty. Her warm spirit and compassionate heart are a source of joy to everyone she meets.",
@@ -120,7 +121,7 @@ function ProfileCard({ profile, index }) {
             <img
               src={profile.imageSrc}
               alt={profile.name}
-              className="w-full h-full object-cover scale-105"
+              className="w-full h-full object-cover scale-100"
             />
           </div>
 

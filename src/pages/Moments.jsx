@@ -18,12 +18,12 @@ const images = [
   },
   {
     id: 4,
-    src: "/chonim6.jpeg",
+    src: "/chonim12.jpeg",
     alt: "Studio portrait with flower",
   },
   {
     id: 5,
-    src: "/chonim13.jpeg",
+    src: "/gallery8.jpeg",
     alt: "Couple close portrait",
   },
   {
@@ -48,7 +48,7 @@ const images = [
   },
   {
     id: 10,
-    src: "/NimStory.jpg",
+    src: "/gallery13.jpeg",
     alt: "Elegant wedding attire",
   },
   {
@@ -59,6 +59,21 @@ const images = [
   {
     id: 12,
     src: "/chonim10.jpeg",
+    alt: "Joyful celebration",
+  },
+  {
+    id: 13,
+    src: "/gallery15.jpeg",
+    alt: "Joyful celebration",
+  },
+  {
+    id: 13,
+    src: "/gallery5.jpeg",
+    alt: "Joyful celebration",
+  },
+  {
+    id: 13,
+    src: "/gallery16.jpeg",
     alt: "Joyful celebration",
   },
 ];
