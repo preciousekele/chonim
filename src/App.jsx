@@ -53,7 +53,7 @@ export default function App() {
           <Navbar />
           <section id="home"><Home /></section>
           {/* <section id="our-journey"><OurJourney /></section> */}
-          <section id="connect"><Connect /></section>
+          <section id="our-story"><Connect /></section>
           <section id="connect-nim"><ConnectNim /></section>
           {/* <section id="giftings"><Registry /></section> */}
           <section id="wedding-details">

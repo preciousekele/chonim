@@ -13,7 +13,7 @@ const profiles = [
   {
     name: "NIMECHI",
     side: "right",
-    imageSrc: "/chonim15.jpeg",
+    imageSrc: "/chonim16.jpeg",
     igLink:
       "https://www.instagram.com/anomnimechi?igsh=NWdmYzBwM3Npdngy&utm_source=qr",
     connectLabel: "Connect with Nimechi",

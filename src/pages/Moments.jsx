@@ -56,6 +56,11 @@ const images = [
     src: "/gallery9.jpeg",
     alt: "Hands intertwined",
   },
+    {
+    id: 14,
+    src: "/gallery17.jpeg",
+    alt: "Joyful celebration",
+  },
   {
     id: 12,
     src: "/chonim10.jpeg",
