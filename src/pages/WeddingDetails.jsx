@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react";
 
 export default function WeddingDetails({ onNavigate }) {
   const items = [
@@ -11,48 +11,57 @@ export default function WeddingDetails({ onNavigate }) {
   ];
 
   return (
-    <div style={{
-      minHeight: "80vh",
-      background: "#3D0A14",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "2rem",
-      fontFamily: "'Kugile', serif",
-    }}>
-      <h2 style={{
-        letterSpacing: "0.1em",
+    <div
+      style={{
+        minHeight: "80vh",
+        background: "#3D0A14",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2rem",
         fontFamily: "'Kugile', serif",
-        lineHeight: 1,
-        fontWeight: 200,
-        fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
-        marginBottom: "0.5rem",
-        textAlign: "center",
-        color: "#EDE4D5",
-      }}>
+      }}
+    >
+      <h2
+        style={{
+          letterSpacing: "0.1em",
+          fontFamily: "'Kugile', serif",
+          lineHeight: 1,
+          fontWeight: 200,
+          fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
+          marginBottom: "0.5rem",
+          textAlign: "center",
+          color: "#EDE4D5",
+        }}
+      >
         WEDDING DETAILS
       </h2>
 
-      <p className="py-3" style={{
-        letterSpacing: "0.1em",
-        fontFamily: "'Kugile', serif",
-        lineHeight: 1,
-        fontWeight: 200,
-        fontSize: "clamp(.5rem, 3vw, 1rem)",
-        textAlign: "center",
-        color: "#EDE4D5",
-      }}>
+      <p
+        className="py-3"
+        style={{
+          letterSpacing: "0.1em",
+          fontFamily: "'Kugile', serif",
+          lineHeight: 1,
+          fontWeight: 200,
+          fontSize: "clamp(.5rem, 3vw, 1rem)",
+          textAlign: "center",
+          color: "#EDE4D5",
+        }}
+      >
         kindly click all for further important details
       </p>
 
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-        width: "100%",
-        maxWidth: "380px",
-      }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          width: "100%",
+          maxWidth: "380px",
+        }}
+      >
         {items.map(({ label, key }) => (
           <button
             key={key}
@@ -73,7 +82,9 @@ export default function WeddingDetails({ onNavigate }) {
               boxShadow: "0 4px 12px rgba(139,38,53,0.3)",
               transition: "transform 0.15s, box-shadow 0.15s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "scale(1.02)")
+            }
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             {label}
@@ -81,6 +92,32 @@ export default function WeddingDetails({ onNavigate }) {
           </button>
         ))}
       </div>
+
+      <p
+        style={{
+          marginTop: "2rem",
+          textAlign: "center",
+          color: "#EDE4D5",
+          fontFamily: "'Kugile', serif",
+          fontWeight: 200,
+          fontSize: "clamp(0.85rem, 3vw, 0.85rem)",
+          letterSpacing: "0.08em",
+          lineHeight: 1.8,
+          opacity: 0.8,
+        }}
+      >
+        For further enquiries and questions, contact
+        <a
+          href="mailto:nimechiwedschoko@gmail.com"
+          style={{
+            color: "#EDE4D5",
+            textDecoration: "underline",
+            opacity: 0.9,
+          }}
+        >
+          nimechiwedschoko@gmail.com
+        </a>
+      </p>
     </div>
   );
 }
