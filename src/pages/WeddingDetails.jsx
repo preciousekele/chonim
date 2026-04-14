@@ -106,7 +106,7 @@ export default function WeddingDetails({ onNavigate }) {
           opacity: 0.8,
         }}
       >
-        For further enquiries and questions, contact
+        For further enquirie, contact <br />
         <a
           href="mailto:nimechiwedschoko@gmail.com"
           style={{
