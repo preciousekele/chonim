@@ -118,8 +118,8 @@ export default function Streaming() {
 
           <div className="flex flex-row items-center gap-4 mt-4">
             {[
-              { label: "West Africa Time", time: "00:00 WAT" },
-              { label: "United Kingdom", time: "00:00 BST" },
+              { label: "West Africa Time", time: "12:00PM WAT" },
+              { label: "United Kingdom", time: "12:00PM BST" },
             ].map((t) => (
               <div key={t.label} className="flex flex-col items-center gap-1">
                 <span
