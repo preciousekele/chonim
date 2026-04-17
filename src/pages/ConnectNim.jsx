@@ -1,15 +1,6 @@
 import { useEffect, useRef } from "react";
 
 const profiles = [
-  //   {
-  //     name: "CHOKO",
-  //     side: "left",
-  //     imageSrc: "/chonim5.jpeg",
-  //     igLink: "https://instagram.com/choko",
-  //     description:
-  //       "Choko is a loving and audacious soul, with a heart deeply rooted in faith. A natural leader who brings people together, his adventurous spirit balances with a deep, compassionate love that makes him the rock for his family.",
-  //     connectLabel: "Connect with Choko",
-  //   },
   {
     name: "NIMECHI",
     side: "right",
