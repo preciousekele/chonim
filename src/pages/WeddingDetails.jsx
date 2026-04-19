@@ -65,7 +65,10 @@ export default function WeddingDetails({ onNavigate }) {
         {items.map(({ label, key }) => (
           <button
             key={key}
-            onClick={() => onNavigate(key)}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              onNavigate(key);
+            }}
             style={{
               display: "flex",
               alignItems: "center",
