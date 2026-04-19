@@ -33,6 +33,7 @@ export default function VideoHero() {
         playsInline
         style={{
           position: "absolute",
+          height: '100svh', 
           overflow: 'hidden',
           top: "50%",
           left: "50%",
