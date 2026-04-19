@@ -5,6 +5,8 @@ export default function VideoHero() {
   const CARD_WIDTH = "80vw";
   const CARD_HEIGHT = "80vh";
 
+  const CLOUD = "da9ttdyye";
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -15,7 +17,10 @@ export default function VideoHero() {
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  const videoSrc = isMobile ? "/bgMobile.mp4" : "/bgvid.mp4";
+  // const videoSrc = isMobile ? "/bgMobile.mp4" : "/bgvid.mp4";
+  const videoSrc = isMobile
+  ? `https://res.cloudinary.com/${CLOUD}/video/upload/q_auto,f_auto/bgMobile_zby2cb.mp4`
+  : `https://res.cloudinary.com/${CLOUD}/video/upload/q_auto,f_auto/bgvid_gvf00c.mp4`;
 
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-black">
