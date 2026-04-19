@@ -11,6 +11,7 @@ import Streaming from './pages/Streaming'
 import { Travel } from './pages/Travel'
 import WeddingDetails from './pages/WeddingDetails'
 import ConnectNim from './pages/ConnectNim'
+import ScrollToTop from './components/ScrollToTop'
 
 function MainLayout() {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ function MainLayout() {
 export default function App() {
   return (
     <BrowserRouter>
+     <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/rsvp" element={<Rsvp onBack={() => window.history.back()} />} />

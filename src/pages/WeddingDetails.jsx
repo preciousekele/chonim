@@ -66,7 +66,6 @@ export default function WeddingDetails({ onNavigate }) {
           <button
             key={key}
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
               onNavigate(key);
             }}
             style={{
