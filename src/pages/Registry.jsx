@@ -172,7 +172,11 @@ export default function Registry() {
           textAlign: "center",
         }}
       >
-        We are deeply grateful to celebrate this special day with you. <br /> Your presence means everything to us. <br /> For those who wish to give, we would kindly prefer a cash gift rather than physical items, as we start our journey together
+        Your love, presence, and prayers mean the world to us, and we are truly
+        grateful to celebrate this special moment with you. <br /> If you would like to
+        give us a gift, we would sincerely appreciate it in monetary form. <br />
+        Kindly make use of any of the bank details below. <br />Thank you so much for
+        your generosity. May God replenish and bless you.
       </p>
 
       {/* Cards */}
