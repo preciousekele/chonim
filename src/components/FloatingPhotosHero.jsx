@@ -19,8 +19,8 @@ export default function VideoHero() {
 
   // const videoSrc = isMobile ? "/bgMobile.mp4" : "/bgvid.mp4";
   const videoSrc = isMobile
-  ? `https://res.cloudinary.com/da9ttdyye/video/upload/q_100/bgMobile_zby2cb.mp4`
-  : `https://res.cloudinary.com/da9ttdyye/video/upload/q_100/bgvid_gvf00c.mp4`;
+  ? `https://res.cloudinary.com/${CLOUD}/video/upload/q_100,f_auto/bgMobile_zby2cb.mp4`
+  : `https://res.cloudinary.com/${CLOUD}/video/upload/q_100,f_auto/bgvid_gvf00c.mp4`;
 
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-black">
