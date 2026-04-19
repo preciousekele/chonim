@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import OurJourney from './pages/OurJourney'
 import Connect from './pages/Connect'
 import Moments from './pages/Moments'
 import Header from './components/Header'
@@ -9,58 +8,43 @@ import Rsvp from './pages/Rsvp'
 import Registry from './pages/Registry'
 import ColorPalette from './pages/ColorPalette'
 import Streaming from './pages/Streaming'
-// import BackgroundMusic from './components/BackgroundMusic'
 import { Travel } from './pages/Travel'
 import WeddingDetails from './pages/WeddingDetails'
 import ConnectNim from './pages/ConnectNim'
 
-export default function App() {
-  const [activePage, setActivePage] = useState(null)
-
-  const navigateTo = (page) => {
-    setActivePage(page)
-    window.history.pushState({ page }, '', `#${page}`)
-    window.scrollTo(0, 0)
-  }
-
-  useEffect(() => {
-    const handlePopState = (e) => {
-      const page = e.state?.page ?? null
-      setActivePage(page)
-      window.scrollTo(0, 0)
-    }
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [])
-
-  const goBack = () => window.history.back()
+function MainLayout() {
+  const navigate = useNavigate();
 
   return (
     <>
-      {/* <BackgroundMusic /> */}
-
-      {activePage === 'rsvp' && <Rsvp onBack={goBack} />}
-      {activePage === 'dresscode' && <ColorPalette onBack={goBack} />}
-      {activePage === 'connect' && <Connect onBack={goBack} />}
-      {activePage === 'travel' && <Travel onBack={goBack} />}
-      {activePage === 'moments' && <Moments onBack={goBack} />}
-      {activePage === 'streaming' && <Streaming onBack={goBack} />}
-      {activePage === 'giftings' && <Registry onBack={goBack} />}
-
-      {!activePage && (
-        <>
-          <Header />
-          <Navbar />
-          <section id="home"><Home /></section>
-          {/* <section id="our-journey"><OurJourney /></section> */}
-          <section id="our-story"><Connect /></section>
-          <section id="connect-nim"><ConnectNim /></section>
-          {/* <section id="giftings"><Registry /></section> */}
-          <section id="wedding-details">
-            <WeddingDetails onNavigate={navigateTo} />
-          </section>
-        </>
-      )}
+      <Header />
+      <Navbar />
+      <section id="home"><Home /></section>
+      <section id="our-story"><Connect /></section>
+      <section id="connect-nim"><ConnectNim /></section>
+      <section id="wedding-details">
+        <WeddingDetails onNavigate={(key) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          navigate(`/${key}`);
+        }} />
+      </section>
     </>
-  )
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/rsvp" element={<Rsvp onBack={() => window.history.back()} />} />
+        <Route path="/dresscode" element={<ColorPalette onBack={() => window.history.back()} />} />
+        <Route path="/connect" element={<Connect onBack={() => window.history.back()} />} />
+        <Route path="/travel" element={<Travel onBack={() => window.history.back()} />} />
+        <Route path="/moments" element={<Moments onBack={() => window.history.back()} />} />
+        <Route path="/streaming" element={<Streaming onBack={() => window.history.back()} />} />
+        <Route path="/giftings" element={<Registry onBack={() => window.history.back()} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
