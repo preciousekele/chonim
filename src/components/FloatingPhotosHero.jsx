@@ -23,7 +23,14 @@ export default function VideoHero() {
   : `https://res.cloudinary.com/${CLOUD}/video/upload/q_100/bgvid_gvf00c.mp4`;
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-black">
+    <div className="relative w-full h-screen flex items-center justify-center bg-black"
+     style={{
+      position: "relative",
+      width: "100%",
+      height: "100svh",        
+      overflow: "hidden",       
+      background: "#000",
+    }}>
       {/* VIDEO */}
       <video
         key={videoSrc}
@@ -33,8 +40,6 @@ export default function VideoHero() {
         playsInline
         style={{
           position: "absolute",
-          height: '100svh', 
-          overflow: 'hidden',
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
