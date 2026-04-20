@@ -1,6 +1,9 @@
-import { useEffect, useRef } from "react";
+import { ArrowBigDown, ArrowDown } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 function ChokoStory() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="flex flex-col gap-0 w-full">
       <style>{`
@@ -136,193 +139,237 @@ function ChokoStory() {
         Heathrow — Where Destiny Began to Speak…
       </div>
 
-      <p className="choko-story-p">
-        After landing at Heathrow, I went through immigration and headed
-        straight to the carousel to get my luggage. I remember walking to Daddy
-        just to greet him before going to the carousel.
-      </p>
-      <p className="choko-story-p">
-        Simple plan: Pick my bags, leave the airport and focus on the
-        assignment…
-      </p>
-      <p className="choko-story-p">But… Heaven had other plans.</p>
+      <button
+        onClick={() => setExpanded((e) => !e)}
+        style={{
+          background: "none",
+          border: "none",
+          padding: "0 0 2px",
+          cursor: "pointer",
+          fontFamily: "'Cormorant Garamond', serif",
+          fontStyle: "italic",
+          fontSize: "1.25rem",
+          color: "#d4a0a8",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "6px",
+          marginTop: "0.2rem",
+          transition: "color 0.2s",
+          fontWeight: 600,
+        }}
+      >
+        {expanded ? "See less…" : "See more…"}
+        <span
+          style={{
+            display: "inline-block",
+            transform: expanded ? "rotate(180deg)" : "rotate(0deg)",
+            transition: "transform 0.4s cubic-bezier(0.4,0,0.2,1)",
+            marginLeft: "-4px"
+          }}
+        >
+          <ArrowDown size={20}/>
+        </span>
+      </button>
 
-      <div className="choko-chapter-head">
-        The Delay That Changed Everything
+      <div
+        style={{
+          overflow: "hidden",
+          maxHeight: expanded ? "3000px" : "0px",
+          opacity: expanded ? 1 : 0,
+          transition:
+            "max-height 0.65s cubic-bezier(0.4,0,0.2,1), opacity 0.5s ease",
+        }}
+      >
+        <p className="choko-story-p" style={{ marginTop: "1rem" }}>
+          After landing at Heathrow, I went through immigration and headed
+          straight to the carousel to get my luggage. I remember walking to
+          Daddy just to greet him before going to the carousel.
+        </p>
+        <p className="choko-story-p">
+          Simple plan: Pick my bags, leave the airport and focus on the
+          assignment…
+        </p>
+        <p className="choko-story-p">But… Heaven had other plans.</p>
+
+        <div className="choko-chapter-head">
+          The Delay That Changed Everything
+        </div>
+        <p className="choko-story-p">
+          I waited… And waited… And waited…
+          <br />
+          Everyone from my team had collected their bags. Mine? Nowhere to be
+          found.
+          <br />
+          At this point, I was probably having a quiet "Lord, why me?" moment.
+          <br />
+          Then I noticed…
+          <br />
+          Standing right beside me…
+          <br />
+          The same lady from Abuja.
+        </p>
+
+        <div className="choko-story-divider" />
+        <div className="choko-chapter-head">The Conversation</div>
+
+        <span className="choko-dialogue-line">
+          Me: Hi, how are you? Hope the trip was a good one?
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: I'm great. Yes, the trip was fine.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: Have you gotten any of your bags?
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: No, I haven't. I'm still waiting for them.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: Ahhh, that's fine. I haven't gotten mine too. We're in the same
+          boat now oh. If your bags come out, you'll have to wait for mine!{" "}
+          <span className="choko-aside-text">(We both laughed.)</span>
+        </span>
+        <span className="choko-dialogue-line">Me: Do you live in the UK?</span>
+        <span className="choko-dialogue-line-her">Her: Yes, I do.</span>
+        <span className="choko-dialogue-line">
+          Me: That's nice. So why did you go to Nigeria?
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: I came for my sister's wedding.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: Oh nice! How was it? When was the wedding?
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: It was great. It was just last Saturday.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: You mean just two days ago? Why the rush back to the UK? Normally
+          people use that kind of trip to do plenty things…
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: Yes, I rushed back for a conference.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: Oh, I see. What conference is that?
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: Sound of Revival with Apostle Joshua Selman.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: Wow, that's lovely.{" "}
+          <span className="choko-aside-text">
+            (Looking at her like "you should recognize me")
+          </span>{" "}
+          But why are you here this early? The conference starts on Thursday.
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: There's a workers' meeting I need to attend. I'm a worker.
+        </span>
+        <span className="choko-dialogue-line">
+          Me: Oh, I see. That's great.
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: Do you live in the UK too?
+        </span>
+        <span className="choko-dialogue-line">Me: No, I'm based in Abuja.</span>
+        <span className="choko-dialogue-line-her">
+          Her: So what brought you to the UK?
+        </span>
+        <span className="choko-dialogue-line">
+          Me: I came for a conference too.
+        </span>
+        <span className="choko-dialogue-line-her">
+          Her: Hmm… what conference?
+        </span>
+        <span className="choko-dialogue-line">Me: Sound of Revival.</span>
+        <span className="choko-dialogue-line-her">
+          Her: Wow! Are you serious? Are you also a Koinonia member?
+        </span>
+        <span className="choko-dialogue-line">
+          Me: I'm very serious. That's why I came.{" "}
+          <span className="choko-aside-text">
+            (Meanwhile, inside me I was like, "Koinonia member ke? Nothing bad,
+            but if you're a worker… you're the real deal!" )
+          </span>
+        </span>
+        <span className="choko-dialogue-line-her">Her: That's nice oh…</span>
+
+        <p className="choko-story-p">
+          She then went on to excitedly mention how she saw Daddy, Mr. Victor,
+          Pastor Kayode, and Lekan at the airport. And I simply responded:{" "}
+          <em>"Yes, I saw them too."</em>
+        </p>
+        <p className="choko-story-p">
+          <span className="choko-aside-text">
+            Meanwhile inside me: "Them no sabi me like this…"
+          </span>
+        </p>
+
+        <p className="choko-story-p">
+          Now, I've learnt from Daddy the power of relationships. So I thought:{" "}
+          <br />{" "}
+          <em>
+            "Well… this is my Koinonia UK sister. Let me collect contact."
+          </em>{" "}
+          But also:{" "}
+          <em>
+            "Make dem no catch me say I dey scope woman for airport on Kingdom
+            assignment o…"
+          </em>{" "}
+          😅
+        </p>
+        <p className="choko-story-p">
+          So what did I do? I gave her my number. Smooth. Strategic. Sharp! In
+          my mind:{" "}
+          <em>"If she likes, she will text… if she doesn't, life goes on."</em>
+        </p>
+
+        <div className="choko-story-divider" />
+        <div className="choko-chapter-head">
+          05:40AM — Destiny Sends a Message
+        </div>
+
+        <p className="choko-story-p">
+          The next morning… <br />
+          At exactly 05:40am thereabout… <br />
+          Message received. <br />
+          She reached out. <br />
+          And just like that… <br /> A conversation started, a connection
+          formed, a story began.
+        </p>
+
+        <div className="choko-story-divider" />
+        <div className="choko-chapter-head">
+          The Plot Twist Nobody Saw Coming
+        </div>
+
+        <p className="choko-story-p">
+          Fast forward to today… <br />
+          The "passenger on the same flight"… <br />
+          The "lady at the carousel"… The "Koinonia UK sister"… Is now my
+          wife-to-be.
+        </p>
+
+        <div className="choko-story-divider" />
+
+        <p className="choko-story-p" style={{ textAlign: "center" }}>
+          When God wants to write your story, even airport delays become divine
+          arrangements.
+          <br />
+          <br />
+          Truly, God is the Master Orchestrator of our Life's Music.
+          <br />
+          What looked like inconvenience… Was actually divine alignment.
+          <br />
+          <em>And for this beautiful story, I give all the glory to Him. 🤍</em>
+          <br />
+          <br />
+          <span className="choko-aside-text">
+            For more of our journey, connect with us below.
+          </span>
+        </p>
       </div>
-      <p className="choko-story-p">
-        I waited… And waited… And waited…
-        <br />
-        Everyone from my team had collected their bags. Mine? Nowhere to be
-        found.
-        <br />
-        At this point, I was probably having a quiet "Lord, why me?" moment.
-        <br />
-        Then I noticed…
-        <br />
-        Standing right beside me…
-        <br />
-        The same lady from Abuja.
-      </p>
-
-      <div className="choko-story-divider" />
-      <div className="choko-chapter-head">The Conversation</div>
-
-      <span className="choko-dialogue-line">
-        Me: Hi, how are you? Hope the trip was a good one?
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: I'm great. Yes, the trip was fine.
-      </span>
-      <span className="choko-dialogue-line">
-        Me: Have you gotten any of your bags?
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: No, I haven't. I'm still waiting for them.
-      </span>
-      <span className="choko-dialogue-line">
-        Me: Ahhh, that's fine. I haven't gotten mine too. We're in the same boat
-        now oh. If your bags come out, you'll have to wait for mine!{" "}
-        <span className="choko-aside-text">(We both laughed.)</span>
-      </span>
-      <span className="choko-dialogue-line">Me: Do you live in the UK?</span>
-      <span className="choko-dialogue-line-her">Her: Yes, I do.</span>
-      <span className="choko-dialogue-line">
-        Me: That's nice. So why did you go to Nigeria?
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: I came for my sister's wedding.
-      </span>
-      <span className="choko-dialogue-line">
-        Me: Oh nice! How was it? When was the wedding?
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: It was great. It was just last Saturday.
-      </span>
-      <span className="choko-dialogue-line">
-        Me: You mean just two days ago? Why the rush back to the UK? Normally
-        people use that kind of trip to do plenty things…
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: Yes, I rushed back for a conference.
-      </span>
-      <span className="choko-dialogue-line">
-        Me: Oh, I see. What conference is that?
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: Sound of Revival with Apostle Joshua Selman.
-      </span>
-      <span className="choko-dialogue-line">
-        Me: Wow, that's lovely.{" "}
-        <span className="choko-aside-text">
-          (Looking at her like "you should recognize me")
-        </span>{" "}
-        But why are you here this early? The conference starts on Thursday.
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: There's a workers' meeting I need to attend. I'm a worker.
-      </span>
-      <span className="choko-dialogue-line">Me: Oh, I see. That's great.</span>
-      <span className="choko-dialogue-line-her">
-        Her: Do you live in the UK too?
-      </span>
-      <span className="choko-dialogue-line">Me: No, I'm based in Abuja.</span>
-      <span className="choko-dialogue-line-her">
-        Her: So what brought you to the UK?
-      </span>
-      <span className="choko-dialogue-line">
-        Me: I came for a conference too.
-      </span>
-      <span className="choko-dialogue-line-her">
-        Her: Hmm… what conference?
-      </span>
-      <span className="choko-dialogue-line">Me: Sound of Revival.</span>
-      <span className="choko-dialogue-line-her">
-        Her: Wow! Are you serious? Are you also a Koinonia member?
-      </span>
-      <span className="choko-dialogue-line">
-        Me: I'm very serious. That's why I came.{" "}
-        <span className="choko-aside-text">
-          (Meanwhile, inside me I was like, "Koinonia member ke? Nothing bad,
-          but if you're a worker… you're the real deal!" )
-        </span>
-      </span>
-      <span className="choko-dialogue-line-her">Her: That's nice oh…</span>
-
-      <p className="choko-story-p">
-        She then went on to excitedly mention how she saw Daddy, Mr. Victor,
-        Pastor Kayode, and Lekan at the airport. And I simply responded:{" "}
-        <em>"Yes, I saw them too."</em>
-      </p>
-      <p className="choko-story-p">
-        <span className="choko-aside-text">
-          Meanwhile inside me: "Them no sabi me like this…"
-        </span>
-      </p>
-
-      <p className="choko-story-p">
-        Now, I've learnt from Daddy the power of relationships. So I thought:{" "}
-        <br />{" "}
-        <em>"Well… this is my Koinonia UK sister. Let me collect contact."</em>{" "}
-        But also:{" "}
-        <em>
-          "Make dem no catch me say I dey scope woman for airport on Kingdom
-          assignment o…"
-        </em>{" "}
-        😅
-      </p>
-      <p className="choko-story-p">
-        So what did I do? I gave her my number. Smooth. Strategic. Sharp! In my
-        mind:{" "}
-        <em>"If she likes, she will text… if she doesn't, life goes on."</em>
-      </p>
-
-      <div className="choko-story-divider" />
-      <div className="choko-chapter-head">
-        05:40AM — Destiny Sends a Message
-      </div>
-
-      <p className="choko-story-p">
-        The next morning… <br />
-        At exactly 05:40am thereabout… <br />
-        Message received. <br />
-        She reached out. <br />
-        And just like that… <br /> A conversation started, a connection formed,
-        a story began.
-      </p>
-
-      <div className="choko-story-divider" />
-      <div className="choko-chapter-head">The Plot Twist Nobody Saw Coming</div>
-
-      <p className="choko-story-p">
-        Fast forward to today… <br />
-        The "passenger on the same flight"… <br />
-        The "lady at the carousel"… The "Koinonia UK sister"… Is now my
-        wife-to-be.
-      </p>
-
-      <div className="choko-story-divider" />
-
-      <p className="choko-story-p" style={{ textAlign: "center" }}>
-        Never underestimate delayed luggage.
-        <br />
-        British Airways might just be doing matchmaking ministry.
-        <br />
-        When God wants to write your story, even airport delays become divine
-        arrangements.
-        <br />
-        <br />
-        Truly, God is the Master Orchestrator of our Life's Music.
-        <br />
-        What looked like inconvenience… Was actually divine alignment.
-        <br />
-        <em>And for this beautiful story, I give all the glory to Him. 🤍</em>
-        <br />
-        <br />
-        <span className="choko-aside-text">
-          For more of our journey, connect with us below.
-        </span>
-      </p>
     </div>
   );
 }

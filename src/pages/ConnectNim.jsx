@@ -231,7 +231,7 @@ function NimechiStory() {
 
       <div className="story-divider" />
 
-      <p className="story-p">It was the morning of 17th September 2024. I was heading back to the UK from Nigeria after my immediate elder sister's wedding. The whole trip had been filled with fun, food, love, and celebration with family and friends. Then suddenly, it was time to return to work and life in the UK.</p>
+      <p className="story-p">It was the morning of 16th September 2024. I was heading back to the UK from Nigeria after my immediate elder sister's wedding. The whole trip had been filled with fun, food, love, and celebration with family and friends. Then suddenly, it was time to return to work and life in the UK.</p>
       <p className="story-p">By the time we landed in London that evening, my mind was on one thing. I just wanted to get through immigration, pick up my bags, and continue my journey. And if I'm being honest, I was not looking my best at all. I wore whatever I could find that morning. No effort, no coordination, just survival. I honestly was not looking "toastable" 😂</p>
       <p className="story-p">At the Heathrow airport baggage carousel, something caught my attention. I saw Apostle Joshua Selman, Pastor Kayode, and a few familiar faces from Koinonia. I became excited immediately. Imagine being on the same flight and only realising after landing. But I was too shy to go and greet them. So I just stood there, waiting for my bags.</p>
       <p className="story-p">The crowd began to reduce. One by one, people picked up their bags and left until only a few of us remained. Then a young man walked up to me and said jokingly:</p>
@@ -246,7 +246,7 @@ function NimechiStory() {
       <p className="story-p">I asked if he lived in the UK. He said no. He told me he had come for a conference. I said I lived in the UK, but had travelled to Nigeria and returned early for a conference called Sound of Revival UK. When I told him I had only gone for my sister's wedding and was already heading back, he was surprised. He said that was barely three days.</p>
       <p className="story-p">I explained that I had responsibilities. I was part of the medical workforce in Koinonia UK and had already been placed on the rota. I did not want to cancel or let anyone down. Besides, this was service to God and should not be trivialised. He simply said, <em>"Oh wow."</em></p>
       <p className="story-p">Then we realised we were both attending the same conference. At that point, it became: <em>"Oh my brother! Oh my sister!"</em> There was an instant ease. It felt familiar. It felt like home.</p>
-      <p className="story-p">I remember talking excitedly about how I had seen Apostle Joshua Selman and others I recognised from service. I was just talking freely, not even aware of what his own role was.</p>
+      <p className="story-p">I remember talking excitedly about how I had seen Apostle Joshua Selman and others I recognised from Koinonia. I was just talking freely, not even aware of what his own role was.</p>
       <p className="story-p">Then our bags came out, and just like that, the moment was ending. But something in me did not want it to just pass. So we decided to exchange numbers. Nothing serious. I just wanted to make sure he got to where he was staying safely, since he was only visiting the UK. We said our goodbyes with a simple hope:</p>
       <span className="dialogue-line">"See you at the conference."</span>
 
