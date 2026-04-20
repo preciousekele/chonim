@@ -105,6 +105,7 @@
 //   );
 // }
 
+
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -112,13 +113,12 @@ export default function VideoHero() {
   const CARD_WIDTH = "80vw";
   const CARD_HEIGHT = "80vh";
 
-  const [isMobile, setIsMobile] = useState(
-    () => window.matchMedia("(max-width: 768px)").matches
-  );
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mq.matches);
     const handler = (e) => setIsMobile(e.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
@@ -130,8 +130,10 @@ export default function VideoHero() {
     const video = videoRef.current;
     if (!video) return;
     video.muted = true;
-    video.load();
-    video.play().catch(() => {});
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {});
+    }
   }, [videoSrc]);
 
   return (
@@ -185,14 +187,8 @@ export default function VideoHero() {
             textShadow: "0 4px 32px rgba(0,0,0,0.6)",
             letterSpacing: "0.05em",
             ...(isMobile
-              ? {
-                  fontSize: "clamp(27px, 12vw, 12px)",
-                  lineHeight: 1.8,
-                }
-              : {
-                  fontSize: "clamp(36px, 5vw, 72px)",
-                  lineHeight: 1.4,
-                }),
+              ? { fontSize: "clamp(27px, 12vw, 12px)", lineHeight: 1.8 }
+              : { fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.4 }),
           }}
         >
           We are getting Married!!!
