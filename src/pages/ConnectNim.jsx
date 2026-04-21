@@ -322,46 +322,7 @@ function NimechiStory() {
 
       <div className="story-divider" />
       <div className="chapter-head">
-        A second meeting and an unexpected surprise.
-      </div>
-
-      <p className="story-p">
-        The next morning, I sent him a message just to check on him. He replied,{" "}
-        <em>"I'm well, and you?"</em> At the conference later that day, we saw
-        each other briefly. We exchanged pleasantries, just hello and hi,
-        nothing deep.
-      </p>
-      <p className="story-p">
-        Then on the last day, while I was carrying out my duties, patrolling the
-        gallery and ensuring everyone was safe, I looked up and saw him on the
-        keyboard. I paused. I was shocked. I said to myself,{" "}
-        <em>what is this guy doing there?</em>
-      </p>
-      <p className="story-p">So I messaged him after service:</p>
-      <span className="dialogue-line">
-        "Surprise, surprise. I just saw you on the keyboard. I didn't know you
-        were into music, interesting."{" "}
-        <span className="aside-text">
-          (I still did not put two and two together that he was Apostle's
-          keyboardist.)
-        </span>
-      </span>
-      <p className="story-p">
-        I even teased him and said I would not have taken him for someone who
-        sings or even likes music. He replied and said I was partially right
-        because he does not sing. I asked:
-      </p>
-      <span className="dialogue-line">
-        "So what is the mic doing in front of you?"
-      </span>
-      <p className="story-p">
-        He explained… and honestly, that was the end of that conversation. Or so
-        I thought 😁
-      </p>
-
-      <div className="story-divider" />
-      <div className="chapter-head">
-        The conversation that changed everything
+        A second meeting and an unexpected surprise...
       </div>
 
       <button
@@ -406,6 +367,45 @@ function NimechiStory() {
         }}
       >
         <div style={{ height: "0.75rem" }} />
+
+        <p className="story-p">
+          The next morning, I sent him a message just to check on him. He
+          replied, <em>"I'm well, and you?"</em> At the conference later that
+          day, we saw each other briefly. We exchanged pleasantries, just hello
+          and hi, nothing deep.
+        </p>
+        <p className="story-p">
+          Then on the last day, while I was carrying out my duties, patrolling
+          the gallery and ensuring everyone was safe, I looked up and saw him on
+          the keyboard. I paused. I was shocked. I said to myself,{" "}
+          <em>what is this guy doing there?</em>
+        </p>
+        <p className="story-p">So I messaged him after service:</p>
+        <span className="dialogue-line">
+          "Surprise, surprise. I just saw you on the keyboard. I didn't know you
+          were into music, interesting."{" "}
+          <span className="aside-text">
+            (I still did not put two and two together that he was Apostle's
+            keyboardist.)
+          </span>
+        </span>
+        <p className="story-p">
+          I even teased him and said I would not have taken him for someone who
+          sings or even likes music. He replied and said I was partially right
+          because he does not sing. I asked:
+        </p>
+        <span className="dialogue-line">
+          "So what is the mic doing in front of you?"
+        </span>
+        <p className="story-p">
+          He explained… and honestly, that was the end of that conversation. Or
+          so I thought 😁
+        </p>
+
+        <div className="story-divider" />
+        <div className="chapter-head">
+          The conversation that changed everything
+        </div>
 
         <p className="story-p">
           The next time which was not many days after, I checked in again, at
