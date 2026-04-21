@@ -41,7 +41,7 @@ const hotels = [
 
 function HotelCard({ hotel }) {
   return (
-    <div className="flex flex-col gap-5 px-10 py-10 border border-gray-400 w-full max-w-sm">
+    <div className="flex flex-col gap-5 px-10 py-10 border border-gray-400 w-full max-w-xs">
       {/* Area */}
       <div>
         <p
@@ -52,7 +52,7 @@ function HotelCard({ hotel }) {
         </p>
       </div>
 
-      <div className="w-66 md:w-76 border-t -mt-2 border-gray-300" />
+      <div className="w-full border-t -mt-2 border-gray-300" />
 
       {/* Hotel Name */}
       <div>
@@ -145,7 +145,7 @@ export const Travel = () => {
       </p>
 
       {/* Hotel Cards */}
-      <div className="flex flex-wrap -py-4 items-start justify-center gap-8 w-full max-w-5xl">
+      <div className="flex flex-wrap items-stretch justify-center gap-8 w-full max-w-6xl">
         {hotels.map((hotel) => (
           <HotelCard key={hotel.name} hotel={hotel} />
         ))}
