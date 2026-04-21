@@ -127,20 +127,17 @@ export default function VideoHero() {
   const videoSrc = isMobile ? "/bgMobile_opt.mp4" : "/bgvid_opt.mp4";
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = true;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {});
-    }
-  }, [videoSrc]);
+  const video = videoRef.current;
+  if (!video) return;
+  video.muted = true; // you can even remove this later since muted is already on the tag
+}, [videoSrc]);
 
   return (
     <div style={{ position: "relative", width: "100%", height: "100svh", overflow: "hidden", background: "#000" }}>
       <video
         ref={videoRef}
         key={videoSrc}
+        autoPlay
         muted
         loop
         playsInline
