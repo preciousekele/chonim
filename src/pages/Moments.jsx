@@ -143,7 +143,7 @@ export default function Moments() {
             aria-label={`View ${img.alt}`}
             onClick={() => setLightbox(img)}
             onKeyDown={(e) => e.key === "Enter" && setLightbox(img)}
-            className="relative overflow-hidden cursor-pointer h-106 md:h-130 group"
+            className="relative overflow-hidden cursor-pointer h-106 md:h-150 group"
           >
             {/* Photo */}
             <img

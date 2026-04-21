@@ -112,7 +112,7 @@ function HotelCard({ hotel }) {
 export const Travel = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center px-6 py-8 md:py-32"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-8 md:py-32"
       style={{
         background: "linear-gradient(to top right, #5d4c29, #FFFFF0, #5d4c29)",
       }}
