@@ -146,7 +146,6 @@ export default function VideoHero() {
         playsInline
         webkit-playsinline="true"
         preload="auto"
-        poster="/chonim2.jpg"
         style={{
           position: "absolute",
           top: "50%",

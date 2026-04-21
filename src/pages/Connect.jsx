@@ -148,7 +148,7 @@ function ChokoStory() {
           cursor: "pointer",
           fontFamily: "'Cormorant Garamond', serif",
           fontStyle: "italic",
-          fontSize: "1.25rem",
+          fontSize: "clamp(.2rem, 5vw, 1.3rem)",
           color: "#d4a0a8",
           display: "inline-flex",
           alignItems: "center",
