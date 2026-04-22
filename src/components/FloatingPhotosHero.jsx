@@ -113,16 +113,24 @@ export default function VideoHero() {
   const CARD_WIDTH = "80vw";
   const CARD_HEIGHT = "80vh";
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 768px)");
-    setIsMobile(mq.matches);
-    const handler = (e) => setIsMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
+  const video = videoRef.current;
+  if (!video) return;
+  video.muted = true;
+
+  const tryPlay = () => {
+    video.play().catch(() => {});
+  };
+
+  video.addEventListener("canplay", tryPlay, { once: true });
+
+  tryPlay();
+
+  return () => video.removeEventListener("canplay", tryPlay);
+}, [videoSrc]);
 
   const videoSrc = isMobile ? "/bgMobile_opt.mp4" : "/bgvid_opt.mp4";
 
