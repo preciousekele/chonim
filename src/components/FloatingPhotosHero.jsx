@@ -113,7 +113,7 @@ export default function VideoHero() {
   const CARD_WIDTH = "80vw";
   const CARD_HEIGHT = "80vh";
 
-  const isMobile = useIsMobile(); // ← all the logic lives here now
+  const isMobile = useIsMobile(); 
   const videoRef = useRef(null);
   const videoSrc = isMobile ? "/bgMobile_opt.mp4" : "/bgvid_opt.mp4";
 

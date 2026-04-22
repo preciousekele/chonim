@@ -1,4 +1,5 @@
-import { ArrowBigDown, MousePointerClick } from "lucide-react";
+import { ArrowBigDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const streams = [
   {
@@ -59,194 +60,165 @@ const streams = [
   },
 ];
 
+function BackButton() {
+  const navigate = useNavigate();
+  return (
+    <button
+      onClick={() => navigate(-1)}
+      style={{
+        position: "fixed",
+        top: "20px",
+        left: "20px",
+        zIndex: 1000,
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        background: "transparent",
+        border: "none",
+        cursor: "pointer",
+        padding: "6px 4px",
+        fontFamily: "'Jost', sans-serif",
+        fontWeight: 300,
+        fontSize: "12px",
+        letterSpacing: "0.18em",
+        textTransform: "uppercase",
+        color: "#120205",
+        opacity: 0.75,
+        transition: "opacity 0.2s",
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.opacity = 1)}
+      onMouseLeave={(e) => (e.currentTarget.style.opacity = 0.75)}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#120205" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+      Back
+    </button>
+  );
+}
+
 export default function Streaming() {
   return (
-    <div
-      className="relative h-full w-full bg-white overflow-hidden flex flex-col items-center justify-center px-6 py-8 md:py-16"
-      style={{ paddingBottom: "60px", height: "100vh" }}
-    >
+    <>
+      <BackButton />
       <div
-        style={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+        className="relative h-full w-full bg-white overflow-hidden flex flex-col items-center justify-center px-6 py-8 md:py-16"
+        style={{ paddingBottom: "60px", minHeight: "100vh", height: "auto" }}
       >
-        {/* Header */}
-        <h1
-          className="uppercase text-black text-center mb-4"
-          style={{
-            fontFamily: "'Kugile', serif",
-            fontWeight: 400,
-            lineHeight: 0.8,
-            letterSpacing: "0.12em",
-            fontSize: "clamp(1.1rem, 6vw, 1.7rem)",
-            color: "#6B1525",
-          }}
-        >
-          Live Streaming
-        </h1>
-
-        {/* Subtext */}
-        <p
-          className="text-gray-600 text-center mb-20"
-          style={{
-            fontFamily: "Playfair Display, serif",
-            fontWeight: 300,
-            fontSize: "clamp(14px, 2vw, 18px)",
-            letterSpacing: "0.25em",
-          }}
-        >
-          To all our Families and Friends across the globe who can’t 
-          be with us in person, join the celebration via YouTube or Instagram!
-        </p>
-
-        {/* Date + Times */}
-        <div className="flex flex-col items-center gap-2 mb-20">
-          <p
-            className="uppercase text-black text-center"
+        <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h1
+            className="uppercase text-black text-center mt-8 md:mt-0 mb-2"
             style={{
-              fontFamily: "Playfair Display, serif",
-              fontWeight: 500,
-              fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)",
-              letterSpacing: "0.1em",
-            }}
-          >
-            Saturday, 25th JULY 2026
-          </p>
-
-          <div className="flex flex-row items-center gap-4 mt-4">
-            {[
-              { label: "West Africa Time", time: "12:00PM WAT" },
-              { label: "United Kingdom", time: "12:00PM BST" },
-            ].map((t) => (
-              <div key={t.label} className="flex flex-col items-center gap-1">
-                <span
-                  className="uppercase text-gray-400 tracking-widest"
-                  style={{
-                    fontSize: "clamp(11px, 1.8vw, 10px)",
-                    fontWeight: 300,
-                    letterSpacing: "0.3em",
-                    fontFamily: "'Montserrat', sans-serif",
-                  }}
-                >
-                  {t.label}
-                </span>
-                <span
-                  className="text-gray-800 tracking-widest"
-                  style={{
-                    fontSize: "clamp(15px, 1.5vw, 15px)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {t.time}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Click to join CTA */}
-        <div className="flex items-center gap-2 mb-3">
-          <ArrowBigDown
-            size={14}
-            strokeWidth={1.5}
-            className="text-[#6B1525]"
-          />
-          <p
-            className="uppercase tracking-widest"
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 300,
-              fontSize: "11px",
-              letterSpacing: "0.35em",
+              fontFamily: "'Kugile', serif",
+              fontWeight: 400,
+              lineHeight: 0.8,
+              letterSpacing: "0.12em",
+              fontSize: "clamp(1.1rem, 6vw, 1.7rem)",
               color: "#6B1525",
             }}
           >
-            Click to join us live
-          </p>
-          <ArrowBigDown
-            size={14}
-            strokeWidth={1.5}
-            className="text-[#6B1525]"
-          />
-        </div>
+            Live Streaming
+          </h1>
 
-        {/* Stream Buttons */}
-        <div
-          className="flex items-center gap-4 mb-18"
-          style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          {streams.map((s) => (
-            <a
-              key={s.platform}
-              href={s.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-gray-200 hover:border-gray-400 transition-colors duration-300 group"
+          <p
+            className="text-gray-600 text-center mb-20"
+            style={{
+              fontFamily: "Playfair Display, serif",
+              fontWeight: 300,
+              fontSize: "clamp(14px, 2vw, 18px)",
+              letterSpacing: "0.25em",
+            }}
+          >
+            To all our Families and Friends across the globe who can't be with us in person, join the celebration via YouTube or Instagram!
+          </p>
+
+          <div className="flex flex-col items-center gap-2 mb-10">
+            <p
+              className="uppercase text-black text-center"
               style={{
-                padding: "clamp(8px, 2vw, 16px) clamp(12px, 3vw, 40px)",
+                fontFamily: "Playfair Display, serif",
+                fontWeight: 500,
+                fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)",
+                letterSpacing: "0.1em",
               }}
             >
-              <span className="text-gray-400 group-hover:text-gray-700 transition-colors duration-300">
-                {s.icon}
-              </span>
-              <div>
-                <p
-                  className="uppercase text-gray-900 tracking-widest"
-                  style={{
-                    fontSize: "clamp(12px, 2.5vw, 13px)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {s.platform}
-                </p>
-                <p
-                  className="text-gray-500 tracking-widest"
-                  style={{
-                    fontSize: "clamp(11px, 2vw, 12px)",
-                    fontWeight: 400,
-                  }}
-                >
-                  {s.handle}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
+              Saturday, 25th JULY 2026
+            </p>
 
-        {/* Hashtag */}
-        <div className="flex flex-col items-center gap-2 border-t border-gray-100 pt-10 w-full max-w-xs text-center">
-          <p
-            className="uppercase text-gray-400 tracking-widest"
-            style={{
-              fontSize: "13px",
-              fontWeight: 300,
-              letterSpacing: "0.35em",
-            }}
-          >
-            Wedding Hashtag
-          </p>
-          <p
-            className="text"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontWeight: 100,
-              fontSize: "clamp(1.3rem, 3vw, 2.5rem)",
-              letterSpacing: "0.1em",
-              fontStyle: "italic",
-              color: "#7A520F",
-            }}
-          >
-            #Aloveunending
-          </p>
+            <div className="flex flex-row items-center gap-4 mt-4">
+              {[
+                { label: "West Africa Time", time: "12:00PM WAT" },
+                { label: "United Kingdom", time: "12:00PM BST" },
+              ].map((t) => (
+                <div key={t.label} className="flex flex-col items-center gap-1">
+                  <span
+                    className="uppercase text-gray-400 tracking-widest"
+                    style={{ fontSize: "clamp(11px, 1.8vw, 10px)", fontWeight: 300, letterSpacing: "0.3em", fontFamily: "'Montserrat', sans-serif" }}
+                  >
+                    {t.label}
+                  </span>
+                  <span className="text-gray-800 tracking-widest" style={{ fontSize: "clamp(15px, 1.5vw, 15px)", fontWeight: 500 }}>
+                    {t.time}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 mb-3">
+            <ArrowBigDown size={14} strokeWidth={1.5} className="text-[#6B1525]" />
+            <p
+              className="uppercase tracking-widest"
+              style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 300, fontSize: "11px", letterSpacing: "0.35em", color: "#6B1525" }}
+            >
+              Click to join us live
+            </p>
+            <ArrowBigDown size={14} strokeWidth={1.5} className="text-[#6B1525]" />
+          </div>
+
+          <div className="flex items-center gap-4 mb-12" style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
+            {streams.map((s) => (
+              <a
+                key={s.platform}
+                href={s.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border border-gray-200 hover:border-gray-400 transition-colors duration-300 group"
+                style={{ padding: "clamp(8px, 2vw, 16px) clamp(12px, 3vw, 40px)" }}
+              >
+                <span className="text-gray-400 group-hover:text-gray-700 transition-colors duration-300">{s.icon}</span>
+                <div>
+                  <p className="uppercase text-gray-900 tracking-widest" style={{ fontSize: "clamp(12px, 2.5vw, 13px)", fontWeight: 500 }}>
+                    {s.platform}
+                  </p>
+                  <p className="text-gray-500 tracking-widest" style={{ fontSize: "clamp(11px, 2vw, 12px)", fontWeight: 400 }}>
+                    {s.handle}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="flex flex-col items-center gap-2 border-t border-gray-100 pt-4 w-full max-w-xs text-center">
+            <p className="uppercase text-gray-400 tracking-widest" style={{ fontSize: "13px", fontWeight: 300, letterSpacing: "0.35em" }}>
+              Wedding Hashtag
+            </p>
+            <p
+              className="text"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 100,
+                fontSize: "clamp(1.3rem, 3vw, 2.5rem)",
+                letterSpacing: "0.1em",
+                fontStyle: "italic",
+                color: "#7A520F",
+              }}
+            >
+              #Aloveunending
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

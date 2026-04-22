@@ -1,113 +1,122 @@
-export default function ColorPalette() {
-  const shades = [
-    // Taupe family
-    { name: "Warm Taupe", hex: "#B5A89A" },
-    { name: "Dark Taupe", hex: "#8B7D6B" },
-    { name: "Mink", hex: "#6B5E52" },
+import { useNavigate } from "react-router-dom";
 
-    // Burgundy family
-    { name: "Blush Burgundy", hex: "#C4687A" },
-    { name: "Burgundy", hex: "#800020" },
-    { name: "Deep Wine", hex: "#5C0017" },
+const shades = [
+  { name: "Warm Taupe", hex: "#B5A89A" },
+  { name: "Dark Taupe", hex: "#8B7D6B" },
+  { name: "Mink", hex: "#6B5E52" },
+  { name: "Blush Burgundy", hex: "#C4687A" },
+  { name: "Burgundy", hex: "#800020" },
+  { name: "Deep Wine", hex: "#5C0017" },
+  { name: "Ivory", hex: "#F8F4E3" },
+  { name: "Nude", hex: "#E8C9A0" },
+  { name: "Caramel Nude", hex: "#C4A882" },
+];
 
-    // Nude family
-    { name: "Ivory", hex: "#F8F4E3" },
-    { name: "Nude", hex: "#E8C9A0" },
-    { name: "Caramel Nude", hex: "#C4A882" },
-  ];
+const groups = [
+  { label: "Taupe", shades: shades.slice(0, 3) },
+  { label: "Burgundy", shades: shades.slice(3, 6) },
+  { label: "Nude", shades: shades.slice(6, 9) },
+];
 
-  const groups = [
-    { label: "Taupe", shades: shades.slice(0, 3) },
-    { label: "Burgundy", shades: shades.slice(3, 6) },
-    { label: "Nude", shades: shades.slice(6, 9) },
-  ];
-
+function BackButton() {
+  const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center justify-center bg-white px-6 py-10 md:py-18">
-      {/* Header */}
-      <h1
-        className="uppercase text-black text-center mb-4"
-        style={{
-          fontFamily: "'Kugile', serif",
-          fontWeight: 100,
-          lineHeight: 0.8,
-          letterSpacing: "0.12em",
-          fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
-        }}
-      >
-        Dress Code
-      </h1>
+    <button
+      onClick={() => navigate(-1)}
+      style={{
+        position: "fixed",
+        top: "20px",
+        left: "20px",
+        zIndex: 1000,
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        background: "transparent",
+        border: "none",
+        cursor: "pointer",
+        padding: "6px 4px",
+        fontFamily: "'Jost', sans-serif",
+        fontWeight: 300,
+        fontSize: "12px",
+        letterSpacing: "0.18em",
+        textTransform: "uppercase",
+        color: "#120205",
+        opacity: 0.75,
+        transition: "opacity 0.2s",
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.opacity = 1)}
+      onMouseLeave={(e) => (e.currentTarget.style.opacity = 0.75)}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#120205" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+      Back
+    </button>
+  );
+}
 
-      <p
-        className="text-gray-400 uppercase text-center mb-16"
-        style={{
-          fontWeight: 300,
-          fontSize: "clamp(11px, 1vw, 13px)",
-          letterSpacing: "0.3em",
-        }}
-      >
-        Dress elegantly flamboyant in rich African attire in any of the following colours
-      </p>
+export default function ColorPalette() {
+  return (
+    <>
+      <BackButton />
+      <div className="flex flex-col items-center justify-center bg-white mt-6 px-6 py-10 md:py-18">
+        <h1
+          className="uppercase text-black text-center mb-4"
+          style={{
+            fontFamily: "'Kugile', serif",
+            fontWeight: 100,
+            lineHeight: 0.8,
+            letterSpacing: "0.12em",
+            fontSize: "clamp(1.1rem, 6vw, 1.6rem)",
+          }}
+        >
+          Dress Code
+        </h1>
 
-      {/* Groups */}
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-12 w-full max-w-5xl">
-        {groups.map((group) => (
-          <div key={group.label} className="flex flex-col items-center gap-4">
-            {/* Swatches */}
-            <div className="flex flex-row items-center gap-2">
-              {group.shades.map((shade) => (
-                <div
-                  key={shade.hex}
-                  title={shade.name}
-                  style={{
-                    backgroundColor: shade.hex,
-                    width: "clamp(38px, 4vw, 56px)",
-                    height: "clamp(80px, 12vw, 140px)",
-                    borderRadius: "999px",
-                    flexShrink: 0,
-                    boxShadow: "0 4px 18px rgba(0,0,0,0.08)",
-                  }}
-                />
-              ))}
+        <p
+          className="text-gray-400 uppercase text-center mb-16"
+          style={{ fontWeight: 300, fontSize: "clamp(11px, 1vw, 13px)", letterSpacing: "0.3em" }}
+        >
+          Dress elegantly flamboyant in rich African attire in any of the following colours
+        </p>
+
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-12 w-full max-w-5xl">
+          {groups.map((group) => (
+            <div key={group.label} className="flex flex-col items-center gap-4">
+              <div className="flex flex-row items-center gap-2">
+                {group.shades.map((shade) => (
+                  <div
+                    key={shade.hex}
+                    title={shade.name}
+                    style={{
+                      backgroundColor: shade.hex,
+                      width: "clamp(38px, 4vw, 56px)",
+                      height: "clamp(80px, 12vw, 140px)",
+                      borderRadius: "999px",
+                      flexShrink: 0,
+                      boxShadow: "0 4px 18px rgba(0,0,0,0.08)",
+                    }}
+                  />
+                ))}
+              </div>
+              <p
+                className="uppercase text-gray-400 text-center"
+                style={{ fontWeight: 300, fontSize: "clamp(11px, 0.9vw, 12px)", letterSpacing: "0.3em" }}
+              >
+                {group.label}
+              </p>
             </div>
+          ))}
+        </div>
 
-            {/* Group Label */}
-            <p
-              className="uppercase text-gray-400 text-center"
-              style={{
-                fontWeight: 300,
-                fontSize: "clamp(11px, 0.9vw, 12px)",
-                letterSpacing: "0.3em",
-              }}
-            >
-              {group.label}
-            </p>
-          </div>
-        ))}
+        <div className="w-full flex justify-center mt-12 md:mt-16">
+          <img
+            src="/colorpallete.jpeg"
+            alt="Colour palette inspiration"
+            className="w-full max-w-2xl rounded-xl object-cover shadow-lg"
+          />
+        </div>
       </div>
-
-       <div className="w-full flex justify-center mt-12 md:mt-16">
-        <img
-          src="/colorpallete.jpeg"
-          alt="Colour palette inspiration"
-          className="w-full max-w-2xl rounded-xl object-cover shadow-lg"
-        />
-      </div>
-      {/* <p
-        className="text-gray-500 text-center mt-16"
-        style={{
-          // fontFamily: "'SymphonieCalligraphy', cursive",
-          fontFamily: "'Playfair Display', serif",
-
-          fontWeight: 400,
-          fontSize: "clamp(18px, 2.5vw, 36px)",
-          letterSpacing: "0.05em",
-          lineHeight: 1.6,
-        }}
-      >
-        Dress in Taupe, Nude shades and Burgundy
-        in our rich African Attire
-      </p> */}
-    </div>
+    </>
   );
 }
