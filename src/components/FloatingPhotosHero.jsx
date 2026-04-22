@@ -105,43 +105,28 @@
 //   );
 // }
 
-
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export default function VideoHero() {
   const CARD_WIDTH = "80vw";
   const CARD_HEIGHT = "80vh";
 
-  const [isMobile] = useState(false);
+  const isMobile = useIsMobile(); // ← all the logic lives here now
   const videoRef = useRef(null);
-
-  useEffect(() => {
-  const video = videoRef.current;
-  if (!video) return;
-  video.muted = true;
-
-  const tryPlay = () => {
-    video.play().catch(() => {});
-  };
-
-  video.addEventListener("canplay", tryPlay, { once: true });
-
-  tryPlay();
-
-  return () => video.removeEventListener("canplay", tryPlay);
-}, [videoSrc]);
-
   const videoSrc = isMobile ? "/bgMobile_opt.mp4" : "/bgvid_opt.mp4";
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
     video.muted = true;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {});
-    }
+    const tryPlay = () => video.play().catch(() => {});
+    video.addEventListener("canplay", tryPlay, { once: true });
+    tryPlay();
+
+    return () => video.removeEventListener("canplay", tryPlay);
   }, [videoSrc]);
 
   return (
@@ -153,7 +138,7 @@ export default function VideoHero() {
         loop
         playsInline
         webkit-playsinline="true"
-        preload="auto"
+        preload="metadata"
         style={{
           position: "absolute",
           top: "50%",
